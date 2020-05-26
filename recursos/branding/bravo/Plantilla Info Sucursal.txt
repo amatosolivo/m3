@@ -1,0 +1,48 @@
+DETALLES DE LA SUCURSAL
+-----------------------
+
+Nombre
+Direccion
+Telefono
+Horario de apertura
+Rating
+Horarios Populares (dias con mas o menos gente)
+Cantidad de cajas normales
+Cantidad de cajas expreso
+Areas o Departamentos internos: (Panaderia, Carniceria, Embutidos, etc)
+Negocios Adyacentes
+Dias de Ofertas
+Dias de Degustacion
+
+
+Distribucion de pasillos:
+ 1A - Aceite de Oliva, Aceites Especiales, Aceite Vegetal
+ 1B - 
+ 2A - Sazon en Polvo, Sazon Liquido, Legumbres, Vinagres, Salsas para Ensalada
+ 2B - Especias, Salsa para Carnes, Sal, Caldos
+ 3A - Ketchup / Mostaza, Mayuonesa, Carnes Enlatadas, Enlatados del Mar
+ 3B - 
+ 4A - Aceitunas, Sopas
+ 4B - Pasta de Tomate, Queso Parmesano, Pastas
+ 5A - Agua, Maltas, Refrescos, Jugos
+ 5B - Reposteria, Avena, Miel, Harina
+ 6A - Pavo, Carne de Cerdo, Hamburguesas
+ 6B - Compotas, Wipes, Pañales
+ 7A - Margarinas, Mantequillas, Gelatinas, Yogourt
+ 7B - Mermeladas, Pastas / Ciruelas, Frutas Enlatadas
+ 8A - Harinas, Conservas, Miel, Productos Mexicanos
+ 8B - Cereales
+ 9A - Refrescos, Agua, Maltas, Frutos Secos 
+ 9B -  
+10A - Bandejas Desechables, Papel Aluminio, Mascotas
+10B - Papel Aluminio, 
+11A - Cuidado Personal, Tintes, Shampoo, Acondicionador
+11B - 
+12A - Cuidado Intimo, Papel Higienico, Deshodorantes para Adultos
+12B - 
+13A - Fundas de Basura, Desinfectantes, Cloro, Suapers
+13B - Almidones, Suavizantes, Detergentes
+14A - 
+14B - 
+15A - 
+15B - 

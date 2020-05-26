@@ -1,0 +1,327 @@
+Prototipo EMP
+
+MEAN Stack
+----------
+node.js / nodemon
+Express WEb Framework para node.js
+mongoDB / Firebase (cloud)
+Angular.js
+
+Heroku
+mLab
+Azure
+
+Instalando nodejs en ubuntu server 18.04
+https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+
+Pre-Requisitos
+udo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+
+Editar ~/.bashrc y agregar
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
+Instalacion
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+Verificar versiones instaladas
+node -v
+npm -v
+
+Heroku
+
+Instalacion
+
+sudo snap install heroku --classic
+
+
+
+Comandos Linux:
+----------------------------------
+lsblk           -> Informacion de espacio disponible entre todos los dispositivos conectados
+
+sudo dd if=Downloads/ubuntu-server/1804.iso of=/dev/sdf bs=1M status=progress
+                -> Comando para montar una imagen:
+                  if = Input File
+                  of = Output File
+                  bs = Block Size
+
+sudo reboot
+
+ll                              -> Lista de directorio
+ls -al /root                    -> mostrar archivos normales/ocultos/systema en root con sus privilegios
+chmod 600 [archivo/binario]     -> Remover permisos de lectura
+find / -name [archivo.ext]      -> Buscar el archivo partiendo del root cullo nombre sea archivo.ext
+
+/usr/share/backgrounds          -> Ubicacion de los fondos de Ubuntu
+
+sudo apt remove snapd           -> Remueve el repositorio de app de ubuntu (propietario)
+sudo apt purge snapd            -> Eliminar archivos huerfanos despues de la remocion
+sudo apt install tasksel        ->
+sudo tasksel                    -> Interfaz de instalacion via terminal, muestra paquetes que se pueden instalar
+sudo tasksel install mate-core  ->
+sudo apt install lightdm        -> Display manager
+
+Usar "sudo su" para crear carpetas bajo /media como por ejemplo:
+  mainpool / games / backups
+
+blkid                           -> Descriptor de medios, lista los tipos de almacenamiento detectados
+sudo nano /etc/fstab            -> Archivo para configurar los medios de almacenamiento instalados por ejemplo:
+                                   UUID=[Unique Id del Dispositivo] /media/[donde queremos montarlo] btrfs rw,exec 0 0
+                                   btrfs =  Better File System
+                                   rw = Read/Write
+
+                                   exec = Execute
+
+sudo mount -a                   -> Comando para montar lo especificado en fstab
+
+Otros ejemplos de como montar unidades de red en fstab:
+
+//192.168.69.1/MainPool/Cocaleca  /media/mainpool   cifs  credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0 0 0
+//192.168.69.1/Images /media/images                 cifs  credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0 0 0
+
+
+Paquetes comunes:
+awesome                         -> Window Manager
+                                   super + r (run prompt - barra superior)
+                                   super + [Enter] (open terminal)
+                                   super + shift + c (close window)
+                                   nautilus (en la barra run es el navegador de archivos)
+                                   super + s (Hoja de atajos de teclado)
+                                   super + q (Salir de awesome)
+                                   super + j (mover el foco a la ventana izquierda)
+                                   super + k (mover el foco a la ventana derecha)
+
+rc.lua                             archivo de configuracion que debe crearse en ~/.config/awesome
+                                   al final del archivo podemos agregar:
+                                   -- Aplicaciones que auto-inician
+                                   awful.spawn.with_shell('compton') <- Habilitar transparencia de componentes y otras cosas
+                                   awful.spawn.with_shell('nitrogen --restore')  <- debe correrse antes de reiniciar para configurarlo
+                                   awful.util.spawn('dmenu_run') end, <- Cambiando el default de super + r para que corra dmenu
+                                   {description = 'Show the menubar', group = 'Launcher'}), <- Descriptor del comando
+
+suckless-tools pcmanfm             otros paquetes que se pueden instalar con awesome
+
+Comandos:
+!xrandr -s 1680x1050               Cambiar la resolucion de pantalla
+!xrandr                            Si se corre solo invocara la ultima resolucion que se especifico
+sudo !!                            Repetir el ultimo comando con sudo agregado al inicio
+apt list --upgradable              Despues de un apt update nos dice que paquenes pueden ser upgradeados
+apt search [nombre paquete]        Busca en el catalogo el paquete que queremos instalar si no sabemos su nombre correcto
+sudo dpkg -i [paquete.deb]         Comando para instalar un paquete .deb
+sh [archivo script .sh]            Ejecutar un archivo .sh
+gedit [archivo] &                  La & libera la terminal de quedar enganchada con el llamado de editar el archivo
+lsof -p [id proceso]               Muestra los archivos abiertos por un proceso
+
+
+nitrogen                           Configurador de fondos de pantalla, iconos, etc
+fonts-roboto
+rofi
+i3-lock
+xclip                              Comando para terminal el cual copia a memoria lo que se le especifique
+compton
+termite
+qt5-style-plugins                  Paquete para mejorar el look and feel de aplicaciones que NO usan el estilo GTK
+                                    sudo apt install qt5-style-plugins
+                                    echo "export QT_QPA_PLATFORMTHEME=gtk2" >> ~/.profile
+materia-gtk-theme
+flameshot
+lxappearance
+papirus                            Libreria de iconos, hay que agregar el ppa.
+                                   sudo add-apt-repository ppa:papirus/papirus
+papirus-icon-theme
+
+nano /etc/apt/souces.list          Editar el archivo de procedencias de paquetes
+
+cd sources.list.d                  Bajo la misma carpeta para ver los archivos .list de otros paquetes instalados
+                                   podemos borrar alguno que no nos interese y luego correr:
+                                   sudo apt autoclean
+                                   sudo apt autoremove
+                                   sudo apt update
+
+neofetch
+gnome-system-monitor                Monitor de desempeno del sistema
+
+Ruta de ligthdm-webkit2
+https://software.opensuse.org/download.html?project=home:antergos&package=lightdm-webkit2-greeter
+
+lightDM                            Display Manager, hasta la version 16.04
+
+
+Acceso Gratuito a data sobre clima he imagenes satelitales
+----------------------------------------------------------
+https://home.openweathermap.org/
+
+
+
+Tecnicas de Modelado Firebase
+-----------------------------
+
+1.- Array-Contains
+    Contenct discovery by tags (for example, user A tabs user B in a document and whe should be able
+    to notify user B, search/filter documents by tags, etc).
+
+    // Este es un ejemplo de como sacar de la coleccion de 'post' todos los 'mentions' que tenga el userId especificado
+    const userPosts = db.collection('post').where('mentions', 'array-contains', userId);
+
+2.- And, Or, Not
+    Categories are associated to a product and I need to filter by multiple categories at the same time.
+    I need to query items that (1) contain both, (2) items that contain any, and (3) items that do NOT
+    contaion the tag.
+
+    // AND, funciona bien con valores booleanos
+    const query = db.collection('items')
+                    .where('tags.cool', '==', true)
+                    .where('tags.neat', '==', true)
+                    .where('tags.awesome', '==', true)
+                    .where('price', '<', x) // Si se necesita la busqueda de un rango hay que considerar un indice compuesto (composite index)
+                                            // y solo puede haber un solo rango por query que es una limitante a considerar
+
+    // OR
+    const q1 = db.collection('items').where('tags.cool', '==', true)
+    const q2 = db.collection('items').where('tags.neat', '==', true)
+
+    luego corremos los querys de forma concurrente y los unimos en uno solo filtrando los duplicados en la presentacion
+
+    // NOT, must save untagged
+    const not = db.collection('items').where('tags.cool','==','false');
+
+    // NOT with range value
+    const q1 = db.collection('items').where('price','<', 20);
+    const q2 = db.collection('items').where('price','>', 20);
+
+    Ver algolia
+
+3.- Composite Strings
+    It's not tryly production, but I've been working on a helicopter ems 'HEMS' flight planning tool.
+    Uses your geofirex and the FAA's obstacle database.  Thats the one I was asking about finding
+    coords in a bbox not a radius. (https://flightnow.net)
+
+    // Por ejemplo para traer los documentos padre serian aquellos culla llave compuesta es falsa, pe:
+
+    const topLevel = db.collection('coments').where('parent', '==', false);
+
+    // O para traer los documentos que esten a partir de un nivel 
+
+    const traverseBreadth = (level) => db.collection('coments').where('level', '==', level);
+
+    // Tambien podemos traer todos los hijos y los padres a partir de un nivel x
+
+    const traverseDepth = (id) => {
+      return db.collection('comments')
+          .where('parent', '>=', id)
+          .where('parent', '<=', `${id}~`)
+    }
+
+4.- Query and Array of IDs
+    In my case, a have a collection of products, each product has a field
+    named countries, which is an object that contains data for each
+    countries where the product is available
+
+    const readIds = async (collection, ids) => {
+      const reads = ids.map(id => collection.doc(id).get());
+      const result = await Promise.all(reads);
+      return result.map(v => v.data());
+    }
+
+    readIds(db.collection('products'), ['foo', 'bar', 'baz'] )
+
+5.- Duplication
+    Hey jeff- I saw your post about data modeling topics and one I've been working on is a social-media=esque
+    structure    
+
+
+
+Recomendaciones para crear aplicaciones complejas en Flutter
+from: Invoice Ninja App
+============================================================
+
+State Management  -> MobX / Redux
+
+Redux Performance
+
+- Rebuilding BLoC/MobX vs Redux
+- Importance of memoization
+- Set distinct on the view Model
+- Keep number of layers to a minimum
+
+Build Value - Boilerplate code generation for Redux
+
+Persistence
+
+- Separate AppState in to data, ui and auth
+- Persist each section separately
+- Use PersistUI and PersistDAta interfaces
+- Use similar approach to track loading
+- Clear state if app version is different
+
+View Models
+
+- View code should be UI/layout focused
+- Nested view models
+- Options to pass data to views
+  - Pass field as property on view model
+  - Pass AppState as property on view model
+  - Access AppState in view using context
+
+Forms
+
+- Built Value enables change tracking
+- Avoid @nullable, set default value in constructor
+- Static negative countor for new ids
+- Use completers in view models (Dart nativo)
+
+Random Bits
+
+- NeverScrollableScrollPhysics
+- MaterialTapTargetSize.shrinkWrap
+- WidgetsBinding.instance.addPostFrameCallBack(_) => ...
+- WillPopScope
+- IgnorePointer
+
+Code Generator
+
+- Reduces need for a lot fo copy/replace
+- Two main commands:
+  - Init: Update code with your app info
+  - Make: Generate individual module
+- Creates a large amount of code
+- Important to get it right at the beginning
+
+Best Practices
+
+- Use a stricter analysis_options.yaml
+- Use custom widgets rather than functions
+- Run: 'flutter dartfmt lib' to format the entire project
+- sentry.io or Crashlytics << Flutter logger
+- Built Value for immutability
+
+
+
+
+PERFORMANCE - OPTIMIZING FLUTTER APP
+------------------------------------
+Jank
+UI thread
+Tracing
+Flame Chart
+Trade-off
+
+Never profile in debug mode
+Never profile on a virtual device
+Avoid work in the UI thread
+Minimize use of expensive widgets
+
+
+Observatory
+Record the app in slow motion
+
+
+
+
+Strategic DDD for Flutter Architecture
+======================================
+
+

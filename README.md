@@ -1,2 +1,2 @@
 # m3
-Matos, Miguel y Mota Startup Repo
+Matos, Miguel y Mota Starup Repo

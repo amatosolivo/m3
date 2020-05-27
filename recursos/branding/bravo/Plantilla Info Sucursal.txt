@@ -16,6 +16,8 @@ Dias de Degustacion
 
 
 Distribucion de pasillos:
+ 00 - Gondolas de entrada:
+ 		Vegetales, Frutas, Viveres, Verduras, etc
  1A - Aceite de Oliva, Aceites Especiales, Aceite Vegetal
  1B - 
  2A - Sazon en Polvo, Sazon Liquido, Legumbres, Vinagres, Salsas para Ensalada

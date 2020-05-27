@@ -299,8 +299,6 @@ Best Practices
 - Built Value for immutability
 
 
-
-
 PERFORMANCE - OPTIMIZING FLUTTER APP
 ------------------------------------
 Jank
@@ -319,9 +317,16 @@ Observatory
 Record the app in slow motion
 
 
-
-
 Strategic DDD for Flutter Architecture
 ======================================
 
 
+
+
+Plantilla para Login
+--------------------
+https://www.youtube.com/watch?v=1Pw_E7T9TXI
+
+TDD Flutter Workshop
+--------------------
+https://www.youtube.com/watch?v=dc3B_mMrZ-Q&list=PL-QRaNcQ54mHBDrSVNDl-kjKg1fxA8vUX&index=3&t=0s

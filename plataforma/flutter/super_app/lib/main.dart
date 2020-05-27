@@ -17,7 +17,7 @@ class _SuperState extends State<Super> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
         primaryColor: Color(0xff0E1020),
         scaffoldBackgroundColor: Color(0xff0E1020),
       ),

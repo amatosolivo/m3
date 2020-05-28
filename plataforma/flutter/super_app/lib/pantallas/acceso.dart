@@ -1,9 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:superapp/widgets/card_acceso.dart';
-import 'package:superapp/widgets/iconos_personalizados.dart';
-import 'package:superapp/widgets/social_icons.dart';
 
 class Acceso extends StatefulWidget {
   static final String nombreRuta = 'acceso';
@@ -115,6 +115,7 @@ class _AccesoState extends State<Acceso> {
                             style: TextStyle(
                               fontSize: 12,
                               fontFamily: 'Poppins-Medium',
+                              color: Colors.black45,
                             ),
                           ),
                         ],
@@ -189,40 +190,46 @@ class _AccesoState extends State<Acceso> {
                     height: screenUtil.setHeight(40),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      SocialIcon(
-                        colores: [
-                          Color(0xff102397),
-                          Color(0xff187adf),
-                          Color(0xff00eaf8),
-                        ],
-                        dataIcono: IconosPersonalizados.facebook,
-                        onPressed: () {},
+                      ClipOval(
+                        child: Material(
+                            color: Colors.blue,
+                            child: InkWell(
+                              splashColor: Colors.red,
+                              child: SizedBox(
+                                width: 56,
+                                height: 56,
+                                child: Center(child: FaIcon(FontAwesomeIcons.twitter)),
+                              ),
+                              onTap: () {},
+                            )),
                       ),
-                      SocialIcon(
-                        colores: [
-                          Color(0xffff4f38),
-                          Color(0xffff355d),
-                        ],
-                        dataIcono: IconosPersonalizados.google,
-                        onPressed: () {},
+                      ClipOval(
+                        child: Material(
+                            color: Colors.blue,
+                            child: InkWell(
+                              splashColor: Colors.red,
+                              child: SizedBox(
+                                width: 56,
+                                height: 56,
+                                child: Center(child: FaIcon(FontAwesomeIcons.google)),
+                              ),
+                              onTap: () {},
+                            )),
                       ),
-                      SocialIcon(
-                        colores: [
-                          Color(0xff17ead9),
-                          Color(0xff6078ea),
-                        ],
-                        dataIcono: IconosPersonalizados.twitter,
-                        onPressed: () {},
-                      ),
-                      SocialIcon(
-                        colores: [
-                          Color(0xff00c6fb),
-                          Color(0xff005bea),
-                        ],
-                        dataIcono: IconosPersonalizados.linkedIn,
-                        onPressed: () {},
+                      ClipOval(
+                        child: Material(
+                            color: Colors.blue,
+                            child: InkWell(
+                              splashColor: Colors.red,
+                              child: SizedBox(
+                                width: 56,
+                                height: 56,
+                                child: Center(child: FaIcon(FontAwesomeIcons.facebook)),
+                              ),
+                              onTap: () {},
+                            )),
                       ),
                     ],
                   ),
@@ -234,7 +241,7 @@ class _AccesoState extends State<Acceso> {
                     children: <Widget>[
                       Text(
                         'Nuevo usuario? ',
-                        style: TextStyle(fontFamily: 'Poppins-Medium'),
+                        style: TextStyle(fontFamily: 'Poppins-Medium', color: Colors.grey),
                       ),
                       InkWell(
                         onTap: () {},

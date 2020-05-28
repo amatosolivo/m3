@@ -40,6 +40,7 @@ class CardAcceso extends StatelessWidget {
                 fontSize: screenUtil.setSp(45),
                 fontFamily: 'Poppins-Bold',
                 letterSpacing: .6,
+                color: Colors.black45,
               ),
             ),
             SizedBox(
@@ -50,6 +51,7 @@ class CardAcceso extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Poppins-Medium',
                 fontSize: screenUtil.setSp(26),
+                color: Colors.black45,
               ),
             ),
             TextField(
@@ -68,6 +70,7 @@ class CardAcceso extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Poppins-Medium',
                 fontSize: screenUtil.setSp(26),
+                color: Colors.black45,
               ),
             ),
             TextField(

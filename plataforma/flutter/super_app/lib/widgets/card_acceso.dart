@@ -12,7 +12,7 @@ class CardAcceso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: screenUtil.setHeight(700),
+      height: screenUtil.setHeight(600),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
@@ -37,49 +37,33 @@ class CardAcceso extends StatelessWidget {
             Text(
               'Acceder',
               style: TextStyle(
-                fontSize: screenUtil.setSp(45),
+                fontSize: screenUtil.setSp(55),
                 fontFamily: 'Poppins-Bold',
                 letterSpacing: .6,
-                color: Colors.black45,
+                color: Colors.black,
               ),
             ),
             SizedBox(
               height: screenUtil.setHeight(30),
             ),
-            Text(
-              'Usuario',
-              style: TextStyle(
-                fontFamily: 'Poppins-Medium',
-                fontSize: screenUtil.setSp(26),
-                color: Colors.black45,
-              ),
-            ),
             TextField(
               decoration: InputDecoration(
-                  hintText: 'Nombre de usuario',
+                  hintText: 'Usuario',
                   hintStyle: TextStyle(
                     color: Colors.grey,
-                    fontSize: 12.0,
+                    fontSize: 17.0,
                   )),
             ),
             SizedBox(
               height: screenUtil.setHeight(30),
             ),
-            Text(
-              'Contraseña',
-              style: TextStyle(
-                fontFamily: 'Poppins-Medium',
-                fontSize: screenUtil.setSp(26),
-                color: Colors.black45,
-              ),
-            ),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                  hintText: 'Digite su clave',
+                  hintText: 'Contraseña',
                   hintStyle: TextStyle(
                     color: Colors.grey,
-                    fontSize: 12.0,
+                    fontSize: 17.0,
                   )),
             ),
             SizedBox(
@@ -93,7 +77,7 @@ class CardAcceso extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'Poppins-Medium',
-                    fontSize: screenUtil.setSp(38),
+                    fontSize: screenUtil.setSp(40),
                   ),
                 )
               ],

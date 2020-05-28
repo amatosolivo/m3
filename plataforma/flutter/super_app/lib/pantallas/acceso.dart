@@ -90,6 +90,7 @@ class _AccesoState extends State<Acceso> {
                           fontSize: screenUtil.setSp(54),
                           letterSpacing: .6,
                           fontWeight: FontWeight.bold,
+                          color: Colors.black,
                         ),
                       )
                     ],
@@ -169,19 +170,19 @@ class _AccesoState extends State<Acceso> {
                         child: Container(
                           width: screenUtil.setWidth(120.0),
                           height: screenUtil.setHeight(1.0),
-                          color: Colors.black26.withOpacity(.2),
+                          color: Colors.black26.withOpacity(.9),
                         ),
                       ),
                       Text(
                         'Otras vias de acceso',
-                        style: TextStyle(fontSize: 16.0, fontFamily: 'Poppins-Medium'),
+                        style: TextStyle(fontSize: 16.0, fontFamily: 'Poppins-Medium', color: Colors.black45),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
                         child: Container(
                           width: screenUtil.setWidth(120.0),
                           height: screenUtil.setHeight(1.0),
-                          color: Colors.black26.withOpacity(.2),
+                          color: Colors.black26.withOpacity(.9),
                         ),
                       ),
                     ],
@@ -194,20 +195,24 @@ class _AccesoState extends State<Acceso> {
                     children: <Widget>[
                       ClipOval(
                         child: Material(
-                            color: Colors.blue,
+                            color: Color(0xff55acee),
                             child: InkWell(
                               splashColor: Colors.red,
                               child: SizedBox(
                                 width: 56,
                                 height: 56,
-                                child: Center(child: FaIcon(FontAwesomeIcons.twitter)),
+                                child: Center(
+                                    child: FaIcon(
+                                  FontAwesomeIcons.twitter,
+                                  color: Colors.white,
+                                )),
                               ),
                               onTap: () {},
                             )),
                       ),
                       ClipOval(
                         child: Material(
-                            color: Colors.blue,
+                            color: Color(0xffdd4b39),
                             child: InkWell(
                               splashColor: Colors.red,
                               child: SizedBox(
@@ -220,13 +225,26 @@ class _AccesoState extends State<Acceso> {
                       ),
                       ClipOval(
                         child: Material(
-                            color: Colors.blue,
+                            color: Color(0xff3b5999),
                             child: InkWell(
                               splashColor: Colors.red,
                               child: SizedBox(
                                 width: 56,
                                 height: 56,
                                 child: Center(child: FaIcon(FontAwesomeIcons.facebook)),
+                              ),
+                              onTap: () {},
+                            )),
+                      ),
+                      ClipOval(
+                        child: Material(
+                            color: Color(0xffe4405f),
+                            child: InkWell(
+                              splashColor: Colors.red,
+                              child: SizedBox(
+                                width: 56,
+                                height: 56,
+                                child: Center(child: FaIcon(FontAwesomeIcons.instagram)),
                               ),
                               onTap: () {},
                             )),

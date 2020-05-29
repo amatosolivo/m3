@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superapp/pantallas/acceso.dart';
-import 'package:superapp/pantallas/bienvenida.dart';
-import 'package:superapp/pantallas/inicio.dart';
-import 'package:superapp/pantallas/promo.dart';
+import 'package:superapp/acceso.dart';
 
 void main() {
   runApp(Super());
@@ -25,9 +22,9 @@ class _SuperState extends State<Super> {
       initialRoute: Acceso.nombreRuta,
       routes: {
         Acceso.nombreRuta: (context) => Acceso(),
-        Promo.nombreRuta: (context) => Promo(),
-        Inicio.nombreRuta: (context) => Inicio(),
-        Bienvenida.nombreRuta: (context) => Bienvenida(),
+//        Promo.nombreRuta: (context) => Promo(),
+//        Inicio.nombreRuta: (context) => Inicio(),
+//        Bienvenida.nombreRuta: (context) => Bienvenida(),
       },
     );
   }

@@ -26,7 +26,7 @@ void main() {
       // arrange
       when(mockUsuarioRepository.getUsuario(any, any)).thenAnswer((realInvocation) async => Right(tUsuario));
       // act
-      final result = await usecase.execute(correo: tCorreo, clave: tClave);
+      final result = await usecase(Params(correo: tCorreo, clave: tClave));
       // assert
       expect(result, Right(tUsuario));
       verify(mockUsuarioRepository.getUsuario(tCorreo, tClave));

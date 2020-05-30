@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:superapp/core/error/failures.dart';
 import 'package:superapp/core/usecases/usecase.dart';
 import 'package:superapp/features/login/domain/entities/usuario.dart';

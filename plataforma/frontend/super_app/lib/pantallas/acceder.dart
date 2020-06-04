@@ -26,7 +26,8 @@ class _AccederState extends State<Acceder> {
               padding: EdgeInsets.only(left: 0, top: 10, bottom: 10),
               child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
             ),
-            Text('Volver', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
+            Text('Volver',
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
           ],
         ),
       ),
@@ -46,7 +47,12 @@ class _AccederState extends State<Acceder> {
           SizedBox(
             height: 10,
           ),
-          TextField(obscureText: isPassword, decoration: InputDecoration(border: InputBorder.none, fillColor: Color(0xfff3f3f4), filled: true))
+          TextField(
+              obscureText: isPassword,
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  fillColor: Color(0xfff3f3f4),
+                  filled: true))
         ],
       ),
     );
@@ -57,7 +63,19 @@ class _AccederState extends State<Acceder> {
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 15),
       alignment: Alignment.center,
-      decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(5)), boxShadow: <BoxShadow>[BoxShadow(color: Colors.grey.shade200, offset: Offset(2, 4), blurRadius: 5, spreadRadius: 2)], gradient: LinearGradient(begin: Alignment.centerLeft, end: Alignment.centerRight, colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.grey.shade200,
+                offset: Offset(2, 4),
+                blurRadius: 5,
+                spreadRadius: 2)
+          ],
+          gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
       child: Text(
         'Acceder',
         style: TextStyle(fontSize: 20, color: Colors.white),
@@ -112,10 +130,16 @@ class _AccederState extends State<Acceder> {
             child: Container(
               decoration: BoxDecoration(
                 color: Color(0xff1959a9),
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), topLeft: Radius.circular(5)),
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(5),
+                    topLeft: Radius.circular(5)),
               ),
               alignment: Alignment.center,
-              child: Text('f', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w400)),
+              child: Text('f',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w400)),
             ),
           ),
           Expanded(
@@ -123,10 +147,16 @@ class _AccederState extends State<Acceder> {
             child: Container(
               decoration: BoxDecoration(
                 color: Color(0xff2872ba),
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(5), topRight: Radius.circular(5)),
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(5),
+                    topRight: Radius.circular(5)),
               ),
               alignment: Alignment.center,
-              child: Text('Acceder con Facebook', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w400)),
+              child: Text('Acceder con Facebook',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400)),
             ),
           ),
         ],
@@ -137,7 +167,8 @@ class _AccederState extends State<Acceder> {
   Widget _createAccountLabel() {
     return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Registro()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Registro()));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 20),
@@ -155,7 +186,10 @@ class _AccederState extends State<Acceder> {
             ),
             Text(
               'Registrate',
-              style: TextStyle(color: Color(0xfff79c4f), fontSize: 13, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: Color(0xfff79c4f),
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600),
             ),
           ],
         ),
@@ -204,7 +238,10 @@ class _AccederState extends State<Acceder> {
       height: height,
       child: Stack(
         children: <Widget>[
-          Positioned(top: -height * .15, right: -MediaQuery.of(context).size.width * .4, child: BezierContainer()),
+          Positioned(
+              top: -height * .15,
+              right: -MediaQuery.of(context).size.width * .4,
+              child: BezierContainer()),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
@@ -221,7 +258,9 @@ class _AccederState extends State<Acceder> {
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10),
                     alignment: Alignment.centerRight,
-                    child: Text('Olvidé mi clave ?', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+                    child: Text('Olvidé mi clave ?',
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w500)),
                   ),
                   _divider(),
                   _facebookButton(),
@@ -237,3 +276,5 @@ class _AccederState extends State<Acceder> {
     ));
   }
 }
+
+/*vamos ver que lo que*/

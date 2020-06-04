@@ -270,7 +270,7 @@ class _AccederState extends State<Acceder> {
               ),
             ),
           ),
-          Positioned(top: 40, left: 0, child: _backButton()),
+          Positioned(top: 30, left: 0, child: _backButton()),
         ],
       ),
     ));

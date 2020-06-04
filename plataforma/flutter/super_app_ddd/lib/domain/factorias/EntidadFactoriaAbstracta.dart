@@ -6,7 +6,7 @@ import 'package:superappddd/domain/value_objects/FechaPublicacion.dart';
 import 'package:superappddd/domain/value_objects/ISBN.dart';
 import 'package:superappddd/domain/value_objects/Titulo.dart';
 
-abstract class EntidadFactoria {
+abstract class EntidadFactoriaAbstracta {
   Libro nuevoLibro({
     @required Titulo titulo,
     @required Autor autor,

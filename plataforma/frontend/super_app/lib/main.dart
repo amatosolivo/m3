@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:superapp/pantallas/home.dart';
+import 'package:superapp/pantallas/bienvenida.dart';
 
 void main() {
   runApp(Super());
@@ -24,7 +24,7 @@ class _SuperState extends State<Super> {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: Bienvenida(),
     );
   }
 }

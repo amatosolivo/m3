@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/plataforma/temporal/super_app_ddd/android/app/src/debug/debug.iml" filepath="$PROJECT_DIR$/plataforma/temporal/super_app_ddd/android/app/src/debug/debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plataforma/flutter/flutter.iml" filepath="$PROJECT_DIR$/plataforma/flutter/flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plataforma/frontend/frontend.iml" filepath="$PROJECT_DIR$/plataforma/frontend/frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plataforma/temporal/super_app_ddd/android/app/src/profile/profile.iml" filepath="$PROJECT_DIR$/plataforma/temporal/super_app_ddd/android/app/src/profile/profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plataforma/frontend/super_app/super_app.iml" filepath="$PROJECT_DIR$/plataforma/frontend/super_app/super_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plataforma/temporal/super_app_ddd/super_app_ddd.iml" filepath="$PROJECT_DIR$/plataforma/temporal/super_app_ddd/super_app_ddd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plataforma/temporal/temporal.iml" filepath="$PROJECT_DIR$/plataforma/temporal/temporal.iml" />
+    </modules>
+  </component>
+</project>

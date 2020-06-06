@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:superapp/pantallas/registro.dart';
 import 'package:superapp/widgets/bezierContainer.dart';
 
@@ -116,47 +117,58 @@ class _AccederState extends State<Acceder> {
     );
   }
 
-  Widget _facebookButton() {
+  Widget _socialMediaButtons() {
     return Container(
       height: 50,
-      margin: EdgeInsets.symmetric(vertical: 20),
+      margin: EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Expanded(
-            flex: 1,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Color(0xff1959a9),
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(5),
-                    topLeft: Radius.circular(5)),
-              ),
-              alignment: Alignment.center,
-              child: Text('f',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w400)),
+          InkWell(
+            splashColor: Colors.amber,
+            radius: 5.0,
+            borderRadius: BorderRadius.circular(35.0),
+            onTap: () {},
+            child: Icon(
+              FontAwesomeIcons.facebook,
+              color: Colors.blue,
+              size: 50,
             ),
           ),
-          Expanded(
-            flex: 5,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Color(0xff2872ba),
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(5),
-                    topRight: Radius.circular(5)),
-              ),
-              alignment: Alignment.center,
-              child: Text('Acceder con Facebook',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
+          InkWell(
+            splashColor: Colors.amber,
+            radius: 5.0,
+            borderRadius: BorderRadius.circular(35.0),
+            onTap: () {},
+            child: Icon(
+              FontAwesomeIcons.google,
+              color: Colors.red,
+              size: 50,
+            ),
+          ),
+          InkWell(
+            splashColor: Colors.amber,
+            radius: 5.0,
+            borderRadius: BorderRadius.circular(35.0),
+            onTap: () {},
+            child: Icon(
+              FontAwesomeIcons.twitter,
+              color: Colors.blue,
+              size: 50,
+            ),
+          ),
+          InkWell(
+            splashColor: Colors.amber,
+            radius: 5.0,
+            borderRadius: BorderRadius.circular(35.0),
+            onTap: () {},
+            child: Icon(
+              FontAwesomeIcons.instagram,
+              color: Colors.red,
+              size: 50,
             ),
           ),
         ],
@@ -198,26 +210,10 @@ class _AccederState extends State<Acceder> {
   }
 
   Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'd',
-          style: GoogleFonts.portLligatSans(
-            textStyle: Theme.of(context).textTheme.headline3,
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            color: Color(0xffe46b10),
-          ),
-          children: [
-            TextSpan(
-              text: 'ev',
-              style: TextStyle(color: Colors.black, fontSize: 30),
-            ),
-            TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
-            ),
-          ]),
+    return Container(
+      child: Image(
+        image: AssetImage('lib/images/appLogo.png'),
+      ),
     );
   }
 
@@ -263,7 +259,7 @@ class _AccederState extends State<Acceder> {
                             fontSize: 14, fontWeight: FontWeight.w500)),
                   ),
                   _divider(),
-                  _facebookButton(),
+                  _socialMediaButtons(),
                   SizedBox(height: height * .055),
                   _createAccountLabel(),
                 ],

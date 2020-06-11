@@ -180,7 +180,7 @@ class _SideBarState extends State<SideBar>
                       child: AnimatedIcon(
                         progress: _animationController.view,
                         icon: AnimatedIcons.menu_close,
-                        color: Color(0xFF1BB5FD),
+                        color: Color(0xFFFFFFFF),
                         size: 25,
                       ),
                     ),

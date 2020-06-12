@@ -2,16 +2,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:superappddd/aplicacion/casosuso/AddLibroCasoUso.dart';
 import 'package:superappddd/aplicacion/limites/add_libro/AddLibroEntrada.dart';
-import 'package:superappddd/domain/entidades/Librero.dart';
-import 'package:superappddd/domain/entidades/Libro.dart';
-import 'package:superappddd/domain/factorias/EntidadFactoriaAbstracta.dart';
-import 'package:superappddd/domain/repositorios/LibreroRepositorioAbstracta.dart';
-import 'package:superappddd/domain/repositorios/LibroRepositorioAbstracta.dart';
-import 'package:superappddd/domain/value_objects/Autor.dart';
-import 'package:superappddd/domain/value_objects/FechaPublicacion.dart';
-import 'package:superappddd/domain/value_objects/ISBN.dart';
-import 'package:superappddd/domain/value_objects/Identity.dart';
-import 'package:superappddd/domain/value_objects/Titulo.dart';
+import 'package:superappddd/dominio/entidades/Librero.dart';
+import 'package:superappddd/dominio/entidades/Libro.dart';
+import 'package:superappddd/dominio/factorias/EntidadFactoriaAbstracta.dart';
+import 'package:superappddd/dominio/repositorios/LibreroRepositorioAbstracta.dart';
+import 'package:superappddd/dominio/repositorios/LibroRepositorioAbstracta.dart';
+import 'package:superappddd/dominio/value_objects/Autor.dart';
+import 'package:superappddd/dominio/value_objects/FechaPublicacion.dart';
+import 'package:superappddd/dominio/value_objects/ISBN.dart';
+import 'package:superappddd/dominio/value_objects/Identity.dart';
+import 'package:superappddd/dominio/value_objects/Titulo.dart';
 
 class MockLibreroRepositorio extends Mock implements LibreroRepositorioAbstracta {}
 

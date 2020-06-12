@@ -1,6 +1,6 @@
-import 'package:superappddd/domain/entidades/Libro.dart';
-import 'package:superappddd/domain/repositorios/LibroRepositorioAbstracta.dart';
-import 'package:superappddd/domain/value_objects/Identity.dart';
+import 'package:superappddd/dominio/entidades/Libro.dart';
+import 'package:superappddd/dominio/repositorios/LibroRepositorioAbstracta.dart';
+import 'package:superappddd/dominio/value_objects/Identity.dart';
 import 'package:superappddd/infraestructura/fuentesDatos/FuenteDatosAbstracta.dart';
 import 'package:superappddd/modelos/LibroModelo.dart';
 

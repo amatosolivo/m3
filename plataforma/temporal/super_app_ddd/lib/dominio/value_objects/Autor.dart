@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:superappddd/domain/value_objects/Fallido.dart';
+import 'package:superappddd/dominio/value_objects/Fallido.dart';
 
 class Autor extends Equatable {
   final String valor;

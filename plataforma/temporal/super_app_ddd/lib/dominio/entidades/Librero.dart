@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:superappddd/domain/ExcepcionesDeDominio.dart';
-import 'package:superappddd/domain/entidades/Libro.dart';
-import 'package:superappddd/domain/value_objects/Identity.dart';
+import 'package:superappddd/dominio/ExcepcionesDeDominio.dart';
+import 'package:superappddd/dominio/entidades/Libro.dart';
+import 'package:superappddd/dominio/value_objects/Identity.dart';
 
 class Librero {
   static const CAPACIDAD_MAXIMA = 10;
@@ -14,7 +14,7 @@ class Librero {
   }
 
   addLibro(Libro libro) {
-    if(_libros.length == CAPACIDAD_MAXIMA)
+    if (_libros.length == CAPACIDAD_MAXIMA)
       throw ExcepcionesDeDominio(mensaje: 'El librero a alcanzado su capacidad maxima');
     else
       _libros.add(libro);

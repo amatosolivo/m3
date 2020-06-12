@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:superappddd/domain/value_objects/Autor.dart';
-import 'package:superappddd/domain/value_objects/FechaPublicacion.dart';
-import 'package:superappddd/domain/value_objects/ISBN.dart';
-import 'package:superappddd/domain/value_objects/Titulo.dart';
+import 'package:superappddd/dominio/value_objects/Autor.dart';
+import 'package:superappddd/dominio/value_objects/FechaPublicacion.dart';
+import 'package:superappddd/dominio/value_objects/ISBN.dart';
+import 'package:superappddd/dominio/value_objects/Titulo.dart';
 import 'package:superappddd/infraestructura/factorias/EntidadFactoria.dart';
 
 void main() {

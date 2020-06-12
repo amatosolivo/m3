@@ -1,4 +1,4 @@
-import 'package:superappddd/domain/value_objects/Identity.dart';
+import 'package:superappddd/dominio/value_objects/Identity.dart';
 import 'package:superappddd/modelos/LibroModelo.dart';
 
 abstract class FuenteDatosAbstracta {

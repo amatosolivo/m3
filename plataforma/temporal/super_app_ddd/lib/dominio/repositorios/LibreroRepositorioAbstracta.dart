@@ -1,5 +1,5 @@
-import 'package:superappddd/domain/entidades/Librero.dart';
-import 'package:superappddd/domain/value_objects/Identity.dart';
+import 'package:superappddd/dominio/entidades/Librero.dart';
+import 'package:superappddd/dominio/value_objects/Identity.dart';
 
 abstract class LibreroRepositorioAbstracta {
   nuevo(Librero librero);

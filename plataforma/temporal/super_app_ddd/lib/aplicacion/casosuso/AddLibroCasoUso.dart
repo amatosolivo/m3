@@ -2,14 +2,14 @@ import 'package:dartz/dartz.dart';
 import 'package:superappddd/aplicacion/limites/add_libro/AdLibroSalida.dart';
 import 'package:superappddd/aplicacion/limites/add_libro/AddLibroCasoUsoAbstracto.dart';
 import 'package:superappddd/aplicacion/limites/add_libro/AddLibroEntrada.dart';
-import 'package:superappddd/domain/ExcepcionesDeDominio.dart';
-import 'package:superappddd/domain/entidades/Librero.dart';
-import 'package:superappddd/domain/entidades/Libro.dart';
-import 'package:superappddd/domain/factorias/EntidadFactoriaAbstracta.dart';
-import 'package:superappddd/domain/repositorios/LibreroRepositorioAbstracta.dart';
-import 'package:superappddd/domain/repositorios/LibroRepositorioAbstracta.dart';
-import 'package:superappddd/domain/value_objects/Fallido.dart';
-import 'package:superappddd/domain/value_objects/Identity.dart';
+import 'package:superappddd/dominio/ExcepcionesDeDominio.dart';
+import 'package:superappddd/dominio/entidades/Librero.dart';
+import 'package:superappddd/dominio/entidades/Libro.dart';
+import 'package:superappddd/dominio/factorias/EntidadFactoriaAbstracta.dart';
+import 'package:superappddd/dominio/repositorios/LibreroRepositorioAbstracta.dart';
+import 'package:superappddd/dominio/repositorios/LibroRepositorioAbstracta.dart';
+import 'package:superappddd/dominio/value_objects/Fallido.dart';
+import 'package:superappddd/dominio/value_objects/Identity.dart';
 
 class AddLibroCasoUso implements AddLibroCasoUsoAbstracto {
   final LibreroRepositorioAbstracta _libreroRepositorio;

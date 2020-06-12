@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:matcher/matcher.dart' as matcher;
-import 'package:superappddd/domain/value_objects/Fallido.dart';
-import 'package:superappddd/domain/value_objects/FechaPublicacion.dart';
+import 'package:superappddd/dominio/value_objects/Fallido.dart';
+import 'package:superappddd/dominio/value_objects/FechaPublicacion.dart';
 
 void main() {
   group('FechaPublicacion', () {
@@ -10,7 +10,7 @@ void main() {
       expect(fecha, matcher.TypeMatcher<Fallido>());
     });
 
-    test('deberia fijar la fecha cuando sea valida', (){
+    test('deberia fijar la fecha cuando sea valida', () {
       var strFecha = '2019-01-20';
       var fecha = FechaPublicacion.crear(strFecha).getOrElse(() => null);
 

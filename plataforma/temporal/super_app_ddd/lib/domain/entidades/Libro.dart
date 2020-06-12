@@ -11,6 +11,13 @@ class Libro {
   Autor autor;
   ISBN isbn;
   FechaPublicacion fechaPublicacion;
-  
-  Libro({this.id, this.autor, this.fechaPublicacion, this.isbn, this.libreroId, this.titulo});
+
+  Libro({
+    this.id,
+    this.autor,
+    this.fechaPublicacion,
+    this.isbn,
+    this.libreroId,
+    this.titulo,
+  });
 }

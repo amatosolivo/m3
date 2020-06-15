@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:superappddd/aplicacion/casosuso/AddLibroCasoUso.dart';
-import 'package:superappddd/aplicacion/limites/add_libro/AddLibroEntrada.dart';
+import 'package:superappddd/aplicacion/casosuso/CrearLibroCasoUso.dart';
+import 'package:superappddd/aplicacion/limites/crear_libro/CrearLibroEntrada.dart';
 import 'package:superappddd/dominio/entidades/Librero.dart';
 import 'package:superappddd/dominio/entidades/Libro.dart';
 import 'package:superappddd/dominio/factorias/EntidadFactoriaAbstracta.dart';
@@ -20,7 +20,7 @@ class MockLibroRepositorio extends Mock implements LibroRepositorioAbstracta {}
 class MockEntidadFactory extends Mock implements EntidadFactoriaAbstracta {}
 
 void main() {
-  AddLibroCasoUso sut;
+  CrearLibroCasoUso sut;
   MockLibreroRepositorio mockLibreroRepositorio;
   MockLibroRepositorio mockLibroRepositorio;
   MockEntidadFactory mockEntidadFactory;
@@ -30,7 +30,7 @@ void main() {
     mockLibreroRepositorio = MockLibreroRepositorio();
     mockEntidadFactory = MockEntidadFactory();
 
-    sut = AddLibroCasoUso(
+    sut = CrearLibroCasoUso(
       libreroRepositorioAbstracta: mockLibreroRepositorio,
       libroRepositorioAbstracta: mockLibroRepositorio,
       entidadFactoriaAbstracta: mockEntidadFactory,
@@ -43,7 +43,7 @@ void main() {
     var isbn = ISBN.crear('ISBN-10: 0-596-52068-9').getOrElse(() => null);
     var fechaPublicacion = FechaPublicacion.crear('2020-01-20').getOrElse(() => null);
 
-    var entrada = AddLibroEntrada(
+    var entrada = CrearLibroEntrada(
       libreroId: Identity.fromString('add'),
       titulo: titulo,
       autor: autor,

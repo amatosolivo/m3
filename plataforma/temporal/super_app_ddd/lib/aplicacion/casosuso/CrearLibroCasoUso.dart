@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:superappddd/aplicacion/limites/add_libro/AdLibroSalida.dart';
-import 'package:superappddd/aplicacion/limites/add_libro/AddLibroCasoUsoAbstracto.dart';
-import 'package:superappddd/aplicacion/limites/add_libro/AddLibroEntrada.dart';
+import 'package:superappddd/aplicacion/limites/crear_libro/CrearLibroCasoUsoAbstracto.dart';
+import 'package:superappddd/aplicacion/limites/crear_libro/CrearLibroEntrada.dart';
+import 'package:superappddd/aplicacion/limites/crear_libro/CrearLibroSalida.dart';
 import 'package:superappddd/dominio/ExcepcionesDeDominio.dart';
 import 'package:superappddd/dominio/entidades/Librero.dart';
 import 'package:superappddd/dominio/entidades/Libro.dart';
@@ -11,12 +11,12 @@ import 'package:superappddd/dominio/repositorios/LibroRepositorioAbstracta.dart'
 import 'package:superappddd/dominio/value_objects/Fallido.dart';
 import 'package:superappddd/dominio/value_objects/Identity.dart';
 
-class AddLibroCasoUso implements AddLibroCasoUsoAbstracto {
+class CrearLibroCasoUso implements CrearLibroCasoUsoAbstracto {
   final LibreroRepositorioAbstracta _libreroRepositorio;
   final LibroRepositorioAbstracta _libroRepositorio;
   final EntidadFactoriaAbstracta _entidadFactoria;
 
-  const AddLibroCasoUso({
+  const CrearLibroCasoUso({
     LibreroRepositorioAbstracta libreroRepositorioAbstracta,
     LibroRepositorioAbstracta libroRepositorioAbstracta,
     EntidadFactoriaAbstracta entidadFactoriaAbstracta,
@@ -25,7 +25,7 @@ class AddLibroCasoUso implements AddLibroCasoUsoAbstracto {
         _entidadFactoria = entidadFactoriaAbstracta;
 
   @override
-  Future<Either<Fallido, AddLibroSalida>> ejecutar(AddLibroEntrada entrada) async {
+  Future<Either<Fallido, CrearLibroSalida>> ejecutar(CrearLibroEntrada entrada) async {
     Libro nuevoLibro = _crearLibroDesdeEntrada(entrada);
 
     Either<Fallido, Librero> resultado = await _addLibroAlLibrero(nuevoLibro, entrada.libreroId);
@@ -39,8 +39,8 @@ class AddLibroCasoUso implements AddLibroCasoUsoAbstracto {
     return _construirSalidaConNuevoLibro(nuevoLibro);
   }
 
-  Either<Fallido, AddLibroSalida> _construirSalidaConNuevoLibro(Libro nuevoLibro) {
-    var salida = AddLibroSalida(
+  Either<Fallido, CrearLibroSalida> _construirSalidaConNuevoLibro(Libro nuevoLibro) {
+    var salida = CrearLibroSalida(
       libroId: nuevoLibro.id,
       libreroId: nuevoLibro.libreroId,
       autor: nuevoLibro.autor,
@@ -64,7 +64,7 @@ class AddLibroCasoUso implements AddLibroCasoUsoAbstracto {
     return Right(librero);
   }
 
-  Libro _crearLibroDesdeEntrada(AddLibroEntrada entrada) {
+  Libro _crearLibroDesdeEntrada(CrearLibroEntrada entrada) {
     return _entidadFactoria.nuevoLibro(
       titulo: entrada.titulo,
       autor: entrada.autor,

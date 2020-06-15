@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
+import 'package:superappddd/aplicacion/constantes/generales.dart';
 import 'package:superappddd/aplicacion/limites/crear_librero/CrearLibreoCasoUsoAbstracto.dart';
 import 'package:superappddd/aplicacion/limites/todos_libros/LibroDTO.dart';
 import 'package:superappddd/aplicacion/limites/todos_libros/TodosLosLibrosCasoUsoAbstracto.dart';
@@ -31,6 +32,10 @@ class InicioVistaModelo {
     agruparPorLibreroId.forEach(
       (id, libros) => _crearLibreroConLibros(id.id, libros),
     );
+
+    if (_libreros.last.libros.length == CAPACIDAD_LIBRERO) {
+      await crearLibrero();
+    }
   }
 
   _crearLibreroConLibros(String id, List<LibroDTO> libros) {

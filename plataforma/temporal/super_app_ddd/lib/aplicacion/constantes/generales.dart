@@ -1,0 +1,1 @@
+const CAPACIDAD_LIBRERO = 6;

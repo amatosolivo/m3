@@ -1,9 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:superappddd/aplicacion/casosuso/CrearLibreroCasoUso.dart';
 import 'package:superappddd/aplicacion/casosuso/TodosLosLibrosCasoUso.dart';
+import 'package:superappddd/aplicacion/constantes/generales.dart';
 import 'package:superappddd/infraestructura/factorias/EntidadFactoria.dart';
 import 'package:superappddd/infraestructura/repositorios/falsos/LibreroRepositorioFalso.dart';
 import 'package:superappddd/infraestructura/repositorios/falsos/LibroRepositorioFalso.dart';
+import 'package:superappddd/modelos/LibroModelo.dart';
 import 'package:superappddd/presentacion/vistamodelos/InicioVistaModelo.dart';
 
 void main() {
@@ -45,6 +47,24 @@ void main() {
       //assert
       expect(sut.libreros, isNotEmpty);
       expect(sut.libreros.first.libros, isNotEmpty);
+    });
+
+    test('crear un nuevo librero si el librero actual alcanza su capacidad maxima', () async {
+      //arrange
+      var map = {
+        "Libro_Id": 'aaa',
+        "Librero_Id": 'bbb',
+        "Titulo": 'Red Rose',
+        "Autor": 'Jan Jensen',
+        "ISBN": 'ISBN-10: 0-596-52068-9',
+        "Fecha_Publicacion": '2020-01-20',
+      };
+      libroRepositorioFalso.libros.add(LibroModelo.fromMap(map));
+      //act
+      await sut.traerLibrosEnLibrero();
+      //assert
+      expect(sut.libreros[sut.libreros.length - 2].libros.length, CAPACIDAD_LIBRERO);
+      expect(sut.libreros.last.libros, isEmpty);
     });
   });
 }

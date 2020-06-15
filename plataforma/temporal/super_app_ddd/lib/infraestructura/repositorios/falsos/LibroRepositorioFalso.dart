@@ -30,7 +30,6 @@ class LibroRepositorioFalso implements LibroRepositorioAbstracta {
       LibroModelo.fromMap(map),
       LibroModelo.fromMap(map2),
       LibroModelo.fromMap(map),
-      LibroModelo.fromMap(map2),
     ];
   }
 

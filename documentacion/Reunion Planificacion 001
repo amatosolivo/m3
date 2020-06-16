@@ -1,0 +1,52 @@
+PRIMERA REUNION DE PLANIFICCION
+Abril 2020
+
+Asistentes
+Alejandro Mota, Alex Matos, Miguel Santana
+
+Agenda
+
+- Introduccion [Nombre, Experiencia Programando, Area de Contribucion]
+- Como colaboraremos? Que herramientas?
+- Idea inicial de la App
+- Caracteristicas (Features) / Historias de Usuario (Use Cases)
+- Cualquier otra cosa que aparezca
+
+Notas
+
+Herramientas de Colaboracion
+
+Discord - Chat
+Trello - Administracion de Tareas
+Google Drive - Notas de reuniones, recursos (assets)
+Compartir en linea - VS Code Collab
+
+Idealizacion de la App
+
+La App sera una herramienta de seleccion de los mejores lubares para comprar al mejor preco creado por M3 (Matos, Mota y Miguel) la cual contara con un backend API.  Esta incluira listas de productos de la canasta familiar y permitira dividir dicha lista en los lugares donde adquirirlos al mejor precio.  Se entrara mas en detalles de tecnologia, ideas, creacion de casos de uso y tareas durante la fase de planificacion.
+
+Caracteristicas:
+	- Lista de Productos
+	- Busqueda de Productos
+	- Vinculos a todos los recursos de codificacion
+	- Sugerencias de Streams
+	- PMF (FAQ) Preguntas mas frecuentes
+	- Creacion del perfil de usuario
+	- Creacion del catalogo de productos
+	- Registro de comercios
+	- Actualizacion de precios (mecanismo automatizado)
+
+Caracteristicas Prioritarias:
+
+	- Armar el Wiki / Issues / Documentacion del Codigo
+	- Pagina de Contribucion
+		> Hecho con (love) por M3...
+	- PMV (Producto Minimo Viable) - Solo lectura (limitado a crear 3 listas y al uso de 2 listas pre-definidas)
+		> Comercios / Sucursales / Direcciones - Open Maps / Contacto / Inventario de Precios
+		> Productos / Precios / Imagenes / Categorias
+		> Usuario (Invitado / Registrado / Autenticado)
+		> Listas Usuario / Producto
+		> Motor de Sugerencias
+		> Comprar (Checklist de Productos en el super seleccionado)
+		> Dar Rating del Comercio
+

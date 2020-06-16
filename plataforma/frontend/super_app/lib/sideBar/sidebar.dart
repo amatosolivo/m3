@@ -136,7 +136,7 @@ class _SideBarState extends State<SideBar>
                       ),
                       MenuItem(
                         icon: Icons.card_giftcard,
-                        title: "Wishlist",
+                        title: "Ordenes",
                       ),
                       Divider(
                         height: 64,
@@ -147,7 +147,12 @@ class _SideBarState extends State<SideBar>
                       ),
                       MenuItem(
                         icon: Icons.settings,
-                        title: "Settings",
+                        title: "Configuracion",
+                        onTap: () {
+                          onIconPressed();
+                          BlocProvider.of<NavigationBloc>(context).add(
+                              NavigationEvents.MiConfiguracionClickedEvent);
+                        },
                       ),
                       MenuItem(
                         icon: Icons.exit_to_app,

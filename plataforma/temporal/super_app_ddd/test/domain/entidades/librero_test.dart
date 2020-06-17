@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:matcher/matcher.dart' as matcher;
+import 'package:superappddd/aplicacion/constantes/generales.dart';
 import 'package:superappddd/dominio/ExcepcionesDeDominio.dart';
 import 'package:superappddd/dominio/entidades/Librero.dart';
 import 'package:superappddd/dominio/entidades/Libro.dart';
@@ -14,7 +15,7 @@ void main() {
 
   group('Librero', () {
     test('addLibro deberia devolver una ExcepcionDeDominio cuando el librero sobrepase su capacidad', () {
-      var libros = List.generate(10, (index) => Libro()).toList();
+      var libros = List.generate(CAPACIDAD_LIBRERO, (index) => Libro()).toList();
       for (var item in libros) {
         sut.addLibro(item);
       }

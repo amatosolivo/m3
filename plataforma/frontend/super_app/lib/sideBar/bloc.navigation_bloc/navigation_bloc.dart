@@ -2,11 +2,13 @@ import 'package:bloc/bloc.dart';
 import 'package:superapp/contenido/MiCuenta.dart';
 import 'package:superapp/contenido/MisListas.dart';
 import 'package:superapp/contenido/PantallaPrincipal.dart';
+import 'package:superapp/contenido/configuracion.dart';
 
 enum NavigationEvents {
   PantallaPrincipalClickedEvent,
   MiCuentaClickedEvent,
   MisListasClickedEvent,
+  MiConfiguracionClickedEvent,
 }
 
 abstract class NavigationStates {}
@@ -26,6 +28,9 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
         break;
       case NavigationEvents.MisListasClickedEvent:
         yield MisListas();
+        break;
+      case NavigationEvents.MiConfiguracionClickedEvent:
+        yield MiConfiguracion();
         break;
     }
   }

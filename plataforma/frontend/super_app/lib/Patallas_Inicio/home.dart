@@ -1,19 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:superapp/button_Bar/button_nav.dart';
 
 class Home extends StatelessWidget {
-  static String nombreRuta = 'home';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text('SuperApp'),
-          backgroundColor: Colors.grey,
-        ),
+      debugShowCheckedModeBanner: false,
+      title: 'SuperApp',
+      theme: ThemeData(
+        primaryColor: Colors.blue,
       ),
+      home: Button_Bar(),
     );
   }
 }

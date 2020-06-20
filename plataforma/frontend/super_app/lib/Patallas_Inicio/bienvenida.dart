@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:superapp/pantallas/acceder.dart';
-import 'package:superapp/pantallas/registro.dart';
+import 'package:superapp/Patallas_Inicio/acceder.dart';
+import 'package:superapp/Patallas_Inicio/registro.dart';
 
 class Bienvenida extends StatefulWidget {
   Bienvenida({Key key, this.title}) : super(key: key);

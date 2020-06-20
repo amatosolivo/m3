@@ -66,7 +66,7 @@ void main() {
       when(
         mockLibreroRepositorio.buscar(entrada.libreroId),
       ).thenAnswer(
-        (_) => Librero(id: entrada.libreroId),
+        (_) async => Librero(id: entrada.libreroId),
       );
 
       when(

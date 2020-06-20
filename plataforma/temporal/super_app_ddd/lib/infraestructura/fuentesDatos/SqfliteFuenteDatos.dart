@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:superappddd/dominio/value_objects/Identity.dart';
 import 'package:superappddd/infraestructura/fuentesDatos/FuenteDatosAbstracta.dart';
+import 'package:superappddd/modelos/LibreroModelo.dart';
 import 'package:superappddd/modelos/LibroModelo.dart';
 
 class SqfliteFuenteDatos implements FuenteDatosAbstracta {
@@ -39,5 +40,34 @@ class SqfliteFuenteDatos implements FuenteDatosAbstracta {
       model.toMap(),
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
+  }
+
+  @override
+  Future<LibreroModelo> buscarLibrero(Identity libreroId) async {
+    var listaDeMapas = await _db.query(
+      'libreros',
+      where: 'Librero_Id = ?',
+      whereArgs: [libreroId.id],
+    );
+    if (listaDeMapas.isEmpty) return null;
+
+    return LibreroModelo.fromMap(listaDeMapas.first);
+  }
+
+  @override
+  Future<List<LibroModelo>> buscarLibrosEnLibrero(Identity libreroId) async {
+    var listaDeMapas = await _db.query(
+      'libros',
+      where: 'Librero_Id = ?',
+      whereArgs: [libreroId.id],
+    );
+    if (listaDeMapas.isEmpty) return [];
+
+    return listaDeMapas.map<LibroModelo>((map) => LibroModelo.fromMap(map)).toList();
+  }
+
+  @override
+  Future<void> crearLibrero(LibreroModelo model) async {
+    return await _db.insert('librero', model.toMap());
   }
 }

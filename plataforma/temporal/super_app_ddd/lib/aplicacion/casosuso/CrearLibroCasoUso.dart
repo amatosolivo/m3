@@ -36,13 +36,13 @@ class CrearLibroCasoUso implements CrearLibroCasoUsoAbstracto {
     await _libroRepositorio.nuevo(nuevoLibro);
     await _libreroRepositorio.actualizar(librero);
 
-    return _construirSalidaConNuevoLibro(nuevoLibro);
+    return _construirSalidaConNuevoLibro(nuevoLibro, librero);
   }
 
-  Either<Fallido, CrearLibroSalida> _construirSalidaConNuevoLibro(Libro nuevoLibro) {
+  Either<Fallido, CrearLibroSalida> _construirSalidaConNuevoLibro(Libro nuevoLibro, Librero librero) {
     var salida = CrearLibroSalida(
       libroId: nuevoLibro.id,
-      libreroId: nuevoLibro.libreroId,
+      libreroId: librero.id,
       autor: nuevoLibro.autor,
       fechaPublicacion: nuevoLibro.fechaPublicacion,
       isbn: nuevoLibro.isbn,

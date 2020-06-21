@@ -1,68 +1,74 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:superapp/Patallas_Inicio/registro.dart';
+import 'package:superapp/contenido/Comparar.dart';
+import 'package:superapp/contenido/MisListas.dart';
 
-void main() => runApp(Button());
 
-class Button extends StatelessWidget {
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Fluid Sidebar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+//
       ),
-      home: new Button_Bar(),
+      home: ButtomNav(),
     );
   }
 }
 
-class Button_Bar extends StatefulWidget {
+class ButtomNav extends StatefulWidget {
+  ButtomNav({Key key}) : super(key: key);
+
   @override
-  _Button_BarState createState() => _Button_BarState();
+  _ButtomNavState createState() => _ButtomNavState();
 }
 
-class _Button_BarState extends State<Button_Bar> {
+class _ButtomNavState extends State<ButtomNav> {
+  static List<Widget> _myPages = <Widget>[MisListas(), Comparar(), Registro()];
+
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
-          "Supper App",
-          style: TextStyle(color: Colors.black),
-        ),
+        title: Text(''),
       ),
-      body: Container(
-        color: Colors.deepOrange,
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'SuperApp',
-              style: TextStyle(color: Colors.white),
+      body: _myPages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
             ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.white,
-        backgroundColor: Colors.deepOrange,
-        buttonBackgroundColor: Colors.white,
-        height: 50,
-        items: <Widget>[
-          Icon(Icons.verified_user, size: 20, color: Colors.black),
-          Icon(Icons.add, size: 20, color: Colors.black),
-          Icon(Icons.list, size: 20, color: Colors.black),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+            ),
+            title: Text(
+              'Settings',
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.call),
+            title: Text('Contact'),
+          ),
         ],
-        animationDuration: Duration(milliseconds: 200),
-        animationCurve: Curves.bounceInOut,
-        onTap: (index) {
-          debugPrint("Print this $index");
-        },
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }

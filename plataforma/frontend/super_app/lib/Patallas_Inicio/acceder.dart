@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:superapp/pantallas/registro.dart';
-import 'package:superapp/sideBar/sidebar_layout.dart';
+import 'package:superapp/Patallas_Inicio//registro.dart';
+import 'package:superapp/button_Bar/buttom_curved_nav.dart';
 import 'package:superapp/widgets/bezierContainer.dart';
 
 class Acceder extends StatefulWidget {
@@ -64,7 +64,7 @@ class _AccederState extends State<Acceder> {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SideBarLayout()));
+            context, MaterialPageRoute(builder: (context) => BottomNavBar()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,

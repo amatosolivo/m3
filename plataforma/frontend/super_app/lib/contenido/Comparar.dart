@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MisListas extends StatelessWidget {
+class Comparar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -11,11 +11,11 @@ class MisListas extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Icon(
-                Icons.format_list_bulleted,
+                Icons.compare,
                 size: 30.0,
               ),
               Text(
-                'Mis Listas',
+                'Comparar',
                 style: TextStyle(fontSize: 30.0),
               ),
             ],

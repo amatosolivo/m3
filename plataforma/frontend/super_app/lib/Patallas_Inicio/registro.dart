@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superapp/pantallas/acceder.dart';
+import 'package:superapp/Patallas_Inicio/acceder.dart';
 import 'package:superapp/widgets/bezierContainer.dart';
 
 class Registro extends StatefulWidget {

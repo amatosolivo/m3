@@ -54,7 +54,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         index: pageIndex,
-        height: 50.0,
+        height: 60.0,
         items: <Widget>[
           Icon(Icons.format_list_numbered, size: 30),
           Icon(Icons.compare, size: 30),
@@ -64,7 +64,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ],
         color: Colors.white,
         buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Color(0xfff7892b),
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         onTap: (int tappedIndex) {

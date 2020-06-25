@@ -1,27 +1,116 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:superapp/contenido/Comparar.dart';
+import 'package:superapp/contenido/category_card.dart';
+import 'package:superapp/contenido/constants.dart';
+import 'package:superapp/contenido/search_bar.dart';
 
 class MisListas extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Card(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Icon(
-                Icons.format_list_bulleted,
-                size: 30.0,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Super',
+      theme: ThemeData(
+        fontFamily: "Cairo",
+        scaffoldBackgroundColor: kBackgroundColor,
+        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
+      ),
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context)
+        .size; //this gonna give us total height and with of our device
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      body: Stack(
+        children: <Widget>[
+          Container(
+            // Here the height of the container is 45% of our total height
+            height: size.height * .45,
+            decoration: BoxDecoration(
+              color: Color(0xfff7892b),
+              image: DecorationImage(
+                alignment: Alignment.centerLeft,
+                image: AssetImage(""),
               ),
-              Text(
-                'Mis Listas',
-                style: TextStyle(fontSize: 30.0),
-              ),
-            ],
+            ),
           ),
-        )
-      ],
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 52,
+                      width: 52,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFF2BEA1),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    "Buenos Dias \nMiguel",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4
+                        .copyWith(fontWeight: FontWeight.w900),
+                  ),
+                  SearchBar(),
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      childAspectRatio: .85,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      children: <Widget>[
+                        CategoryCard(
+                          title: "Mis Listas",
+                          image: Image.asset('lib/images/listas.jpeg'),
+                          press: () {},
+                        ),
+                        CategoryCard(
+                          title: "SuperMercados",
+                          image: Image.asset('lib/images/supers.jpeg'),
+                          press: () {},
+                        ),
+                        CategoryCard(
+                          title: "Productos",
+                          image: Image.asset('lib/images/productos.png'),
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Comparar();
+                              }),
+                            );
+                          },
+                        ),
+                        CategoryCard(
+                          title: "Lista de Categorias",
+                          image: Image.asset('/lib/images/'),
+                          press: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

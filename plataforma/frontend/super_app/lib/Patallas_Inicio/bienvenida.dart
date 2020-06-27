@@ -93,7 +93,7 @@ class _BienvenidaState extends State<Bienvenida> {
   Widget _title() {
     return Container(
       child: Image(
-        image: AssetImage('lib/images/appLogo.png'),
+        image: AssetImage('assets/images/appLogo.png'),
       ),
     );
   }

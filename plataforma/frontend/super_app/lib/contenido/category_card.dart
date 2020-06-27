@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:superapp/contenido/constants.dart';
 
 class CategoryCard extends StatelessWidget {
-  final Image image;
   final String title;
   final Function press;
   const CategoryCard({
     Key key,
-    this.image,
     this.title,
     this.press,
   }) : super(key: key);
@@ -39,7 +37,6 @@ class CategoryCard extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Spacer(),
-                  image,
                   Spacer(),
                   Text(
                     title,

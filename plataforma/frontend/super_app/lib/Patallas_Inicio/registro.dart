@@ -123,7 +123,7 @@ class _RegistroState extends State<Registro> {
   Widget _title() {
     return Container(
       child: Image(
-        image: AssetImage('lib/images/appLogo.png'),
+        image: AssetImage('assets/images/appLogo.png'),
       ),
     );
   }

@@ -219,7 +219,7 @@ class _AccederState extends State<Acceder> {
   Widget _title() {
     return Container(
       child: Image(
-        image: AssetImage('lib/images/appLogo.png'),
+        image: AssetImage('assets/images/appLogo.png'),
       ),
     );
   }

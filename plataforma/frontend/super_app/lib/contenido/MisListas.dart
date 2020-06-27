@@ -77,17 +77,16 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         CategoryCard(
                           title: "Mis Listas",
-                          image: Image.asset('lib/images/listas.jpeg'),
                           press: () {},
                         ),
                         CategoryCard(
                           title: "SuperMercados",
-                          image: Image.asset('lib/images/supers.jpeg'),
+                          image: Image.asset('assets/images/supers.jpeg'),
                           press: () {},
                         ),
                         CategoryCard(
                           title: "Productos",
-                          image: Image.asset('lib/images/productos.png'),
+                          image: Image.asset('assets/images/productos.png'),
                           press: () {
                             Navigator.push(
                               context,
@@ -96,11 +95,6 @@ class HomeScreen extends StatelessWidget {
                               }),
                             );
                           },
-                        ),
-                        CategoryCard(
-                          title: "Lista de Categorias",
-                          image: Image.asset('/lib/images/'),
-                          press: () {},
                         ),
                       ],
                     ),

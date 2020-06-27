@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+/* void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: SideBar(),
     );
   }
-}
+} */
 
 class SideBar extends StatefulWidget {
   @override
@@ -72,16 +72,7 @@ class _SideBarState extends State<SideBar> {
       ])),
       width: mediaQuery.width,
       child: Stack(
-        children: <Widget>[
-          Center(
-            child: MaterialButton(
-                color: Colors.white,
-                child: Text(
-                  "Helo World",
-                  style: TextStyle(color: Colors.black),
-                ),
-                onPressed: () {}),
-          ),
+        children: <Widget>[          
           AnimatedPositioned(
             duration: Duration(milliseconds: 1500),
             left: isMenuOpen ? 0 : -sidebarSize + 20,

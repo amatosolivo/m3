@@ -5,8 +5,8 @@ import 'package:superapp/contenido/Configuracion.dart';
 import 'package:superapp/contenido/Logout.dart';
 import 'package:superapp/contenido/MisListas.dart';
 import 'package:superapp/contenido/Paquetes.dart';
+import 'package:superapp/sideBar/sidebar.dart';
 
-void main() => runApp(MaterialApp(home: BottomNavBar()));
 
 class BottomNavBar extends StatefulWidget {
   @override
@@ -15,6 +15,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
+
   final MisListas _misListas = MisListas();
   final Comparar _comparar = Comparar();
   final Paquetes _paquetes = Paquetes();
@@ -52,6 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       bottomNavigationBar: CurvedNavigationBar(
         index: pageIndex,
         height: 60.0,

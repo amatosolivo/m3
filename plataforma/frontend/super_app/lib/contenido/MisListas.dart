@@ -81,12 +81,10 @@ class HomeScreen extends StatelessWidget {
                         ),
                         CategoryCard(
                           title: "SuperMercados",
-                          image: Image.asset('assets/images/supers.jpeg'),
                           press: () {},
                         ),
                         CategoryCard(
                           title: "Productos",
-                          image: Image.asset('assets/images/productos.png'),
                           press: () {
                             Navigator.push(
                               context,

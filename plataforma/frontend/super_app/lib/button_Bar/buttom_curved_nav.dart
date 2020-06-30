@@ -1,12 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:superapp/contenido/Comparar.dart';
-import 'package:superapp/contenido/Configuracion.dart';
+import 'package:superapp/button_Bar/Comparar.dart';
+import 'package:superapp/button_Bar/MisListas.dart';
+import 'package:superapp/button_Bar/Paquetes.dart';
 import 'package:superapp/contenido/Logout.dart';
-import 'package:superapp/contenido/MisListas.dart';
-import 'package:superapp/contenido/Paquetes.dart';
-
-void main() => runApp(MaterialApp(home: BottomNavBar()));
+import 'package:superapp/sidebar/Configuracion.dart';
 
 class BottomNavBar extends StatefulWidget {
   @override

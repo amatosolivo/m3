@@ -76,8 +76,8 @@ class _RegistroState extends State<Registro> {
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             colors: [
-              Color(0xfffbb448),
-              Color(0xfff7892b),
+              Color(0xff2AA467),
+              Color(0xff1B8A52),
             ]),
       ),
       child: Text(
@@ -110,7 +110,7 @@ class _RegistroState extends State<Registro> {
             Text(
               'Acceder',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Color(0xff2AA467),
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),

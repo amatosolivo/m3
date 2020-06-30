@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:superapp/Patallas_Inicio/registro.dart';
-import 'package:superapp/contenido/Comparar.dart';
-import 'package:superapp/contenido/MisListas.dart';
-
-
-void main() => runApp(MyApp());
+import 'package:superapp/button_Bar/Comparar.dart';
+import 'package:superapp/button_Bar/MisListas.dart';
+import 'package:superapp/contenido/Logout.dart';
+import 'package:superapp/contenido/constants.dart';
+import 'package:superapp/sidebar/Configuracion.dart';
+import 'package:superapp/sidebar/sidebar.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -28,7 +28,12 @@ class ButtomNav extends StatefulWidget {
 }
 
 class _ButtomNavState extends State<ButtomNav> {
-  static List<Widget> _myPages = <Widget>[MisListas(), Comparar(), Registro()];
+  static List<Widget> _myPages = <Widget>[
+    MisListas(),
+    Comparar(),
+    Configuracion(),
+    Salida(),
+  ];
 
   int _selectedIndex = 0;
 
@@ -41,30 +46,55 @@ class _ButtomNavState extends State<ButtomNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideBarNav(),
       appBar: AppBar(
-        title: Text(''),
+        backgroundColor: Color(0xff2AA467),
+        title: Text('Super App'),
       ),
       body: _myPages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xff2AA467),
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
+              color: Colors.white,
             ),
-            title: Text('Home'),
+            title: Text(
+              'Home',
+              style: TextStyle(color: kTextIconColor),
+            ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.settings,
+              Icons.compare_arrows,
+              color: Colors.white,
             ),
             title: Text(
-              'Settings',
+              'Comparar',
+              style: TextStyle(color: kTextIconColor),
             ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
-            title: Text('Contact'),
+            icon: Icon(
+              Icons.cake,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Paquetes',
+              style: TextStyle(color: kTextIconColor),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.exit_to_app,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Salida',
+              style: TextStyle(color: kTextIconColor),
+            ),
           ),
         ],
         currentIndex: _selectedIndex,

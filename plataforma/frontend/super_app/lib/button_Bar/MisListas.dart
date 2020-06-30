@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:superapp/contenido/Comparar.dart';
 import 'package:superapp/contenido/category_card.dart';
 import 'package:superapp/contenido/constants.dart';
 import 'package:superapp/contenido/search_bar.dart';
@@ -11,7 +9,7 @@ class MisListas extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Super',
+      title: 'Meditation App',
       theme: ThemeData(
         fontFamily: "Cairo",
         scaffoldBackgroundColor: kBackgroundColor,
@@ -35,30 +33,21 @@ class HomeScreen extends StatelessWidget {
             // Here the height of the container is 45% of our total height
             height: size.height * .45,
             decoration: BoxDecoration(
-              color: Color(0xfff7892b),
+              color: Color(0xFFF5CEB8),
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
-                image: AssetImage(""),
+                image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
               ),
             ),
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topRight,
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 52,
-                      width: 52,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFF2BEA1),
-                        shape: BoxShape.circle,
-                      ),
-                    ),
                   ),
                   Text(
                     "Buenos Dias \nMiguel",
@@ -77,24 +66,23 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         CategoryCard(
                           title: "Mis Listas",
+                          image: "assets/images/listas.jpeg",
                           press: () {},
                         ),
                         CategoryCard(
                           title: "SuperMercados",
-                          image: Image.asset('assets/images/supers.jpeg'),
+                          image: "assets/images/supers.jpeg",
                           press: () {},
                         ),
                         CategoryCard(
                           title: "Productos",
-                          image: Image.asset('assets/images/productos.png'),
-                          press: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) {
-                                return Comparar();
-                              }),
-                            );
-                          },
+                          image: "assets/images/productos.png",
+                          press: () {},
+                        ),
+                        CategoryCard(
+                          title: "Categorias",
+                          image: "assets/images/appLogo.png",
+                          press: () {},
                         ),
                       ],
                     ),

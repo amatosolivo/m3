@@ -16,7 +16,7 @@ class _SuperState extends State<Super> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Supper',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.latoTextTheme(textTheme).copyWith(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Comparar extends StatelessWidget {
+class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

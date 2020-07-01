@@ -1,18 +1,21 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:superapp/sidebar/Configuracion.dart';
+import 'package:superapp/sidebar/notificaciones.dart';
+import 'package:superapp/sidebar/profile.dart';
 
-class SideBar extends StatelessWidget {
+import 'multilevel_drawer.dart';
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "Nunito"),
-      title: "Super",
-      home: Scaffold(
-        body: Container(
-          color: Color(0xff2AA467),
-        ),
+      title: 'Flutter ML Menu',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: SideBarNav(),
     );
   }
 }
@@ -23,63 +26,110 @@ class SideBarNav extends StatefulWidget {
 }
 
 class _SideBarNavState extends State<SideBarNav> {
-  final List<String> menuItems = ["profile", "Configuracion"];
-  final List<String> menuIcons = ["icon_add", "icon_blogger", "icon_settings"];
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Stack(
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,
+    Size size = MediaQuery.of(context).size;
+    return SafeArea(
+      child: Scaffold(
+        drawer: MultiLevelDrawer(
+          backgroundColor: Colors.white,
+          rippleColor: Colors.white,
+          subMenuBackgroundColor: Colors.grey.shade100,
+          divisionColor: Colors.grey,
+          header: Container(
+            height: size.height * 0.25,
+            child: Center(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  child: Text("Person"),
+                Image.asset(
+                  "assets/dp_default.png",
+                  width: 100,
+                  height: 100,
                 ),
-                Container(
-                  child: Expanded(
-                    child: ListView.builder(
-                      itemCount: menuItems.length,
-                      itemBuilder: (context, index) => Container(
-                        color: Color(0xff2AA467),
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(20),
-                              child: Image.asset(
-                                  "assets/icons/${menuIcons[index]}.png"),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(20),
-                              child: Text(
-                                menuItems[index],
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 16),
-                              ),
-                            ),
-                            GestureDetector(
-                                child: Container(
-                              width: double.infinity,
-                              height: double.infinity,
-                              color: Colors.white,
-                              child: Center(
-                                child: Text("homepage"),
-                              ),
-                            ))
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                )
+                SizedBox(
+                  height: 10,
+                ),
+                Text("RetroPortal Studio")
               ],
+            )),
+          ),
+          children: [
+            MLMenuItem(
+                leading: Icon(Icons.person),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "My Profile",
+                ),
+                subMenuItems: [
+                  MLSubmenu(
+                      onClick: () {
+                        Navigator.of(context).pop();
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => Profile()));
+                      },
+                      submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.settings),
+                trailing: Icon(Icons.arrow_right),
+                content: Text("Configuracion"),
+                onClick: () {},
+                subMenuItems: [
+                  MLSubmenu(
+                      onClick: () {
+                        Navigator.of(context).pop();
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Configuracion()));
+                      },
+                      submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2"))
+                ]),
+            MLMenuItem(
+              leading: Icon(Icons.notifications),
+              content: Text("Notificationes"),
+              onClick: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Notificaciones()));
+              },
             ),
-          )
-        ],
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "Pagos",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+          ],
+        ),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Text(
+            "Multi Level Menu",
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
+        body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color.fromRGBO(255, 65, 108, 1.0),
+                    Color.fromRGBO(255, 75, 43, 1.0),
+                  ]),
+            ),
+            child: Center()),
       ),
     );
   }

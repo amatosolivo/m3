@@ -87,7 +87,7 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                           drawerItems[selectedPosition].subMenuItems.length,
                     ),
                     Positioned(
-                      top: 0,
+                      top: 5,
                       left: 10,
                       child: Container(
                         width: size.width / 2 - 10,
@@ -96,8 +96,8 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                               .subMenuItems
                               .map<Widget>((subMenuItem) {
                             return _MLChoiceItem(
-                              color:
-                                  widget.subMenuBackgroundColor ?? Colors.white,
+                              color: widget.subMenuBackgroundColor ??
+                                  Colors.greenAccent,
                               divisionColor: widget.divisionColor,
                               rippleColor: widget.rippleColor,
                               onTap: () {

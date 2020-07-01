@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:superapp/contenido/category_card.dart';
-import 'package:superapp/contenido/constants.dart';
-import 'package:superapp/contenido/search_bar.dart';
+import 'package:superapp/contenido/MisListas.dart';
+import 'package:superapp/widgets/category_card.dart';
+import 'package:superapp/widgets/constants.dart';
+import 'package:superapp/widgets/search_bar.dart';
 
-class MisListas extends StatelessWidget {
+class inside_Home extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,10 @@ class HomeScreen extends StatelessWidget {
                         CategoryCard(
                           title: "Mis Listas",
                           image: "assets/images/listas.jpeg",
-                          press: () {},
+                          press: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => MisListas()));
+                          },
                         ),
                         CategoryCard(
                           title: "SuperMercados",

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:superapp/contenido/constants.dart';
+import 'package:superapp/widgets/constants.dart';
 
 class CategoryCard extends StatelessWidget {
   final String image;

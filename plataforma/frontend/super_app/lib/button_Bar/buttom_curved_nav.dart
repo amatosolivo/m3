@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:superapp/button_Bar/Comparar.dart';
-import 'package:superapp/button_Bar/MisListas.dart';
+import 'package:superapp/button_Bar/Logout.dart';
 import 'package:superapp/button_Bar/Paquetes.dart';
-import 'package:superapp/contenido/Logout.dart';
+import 'package:superapp/contenido/Inside_Home.dart';
 import 'package:superapp/sidebar/Configuracion.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -13,13 +13,13 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
-  final MisListas _misListas = MisListas();
+  final inside_Home _misListas = inside_Home();
   final Comparar _comparar = Comparar();
   final Paquetes _paquetes = Paquetes();
   final Configuracion _configuracion = Configuracion();
   final Salida _salida = Salida();
 
-  Widget _showPage = MisListas();
+  Widget _showPage = inside_Home();
 
   Widget _pageChooser(int page) {
     switch (page) {

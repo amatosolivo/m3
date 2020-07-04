@@ -50,7 +50,7 @@ class _ButtomNavState extends State<ButtomNav> {
 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        iconSize: 20,
+        iconSize: 25,
         onTap: _onItemTapped,
         backgroundColor: Color(0xff2AA467),
         type: BottomNavigationBarType.fixed,

@@ -53,7 +53,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+//       appBar: AppBar(
+//         title: Text('SupperApp',
+//         style: TextStyle(fontSize: 20,color: Colors.white),),
+//         backgroundColor: Color(0xfff7892b),
+//
+//       ),
+//      drawer:,
       bottomNavigationBar: CurvedNavigationBar(
         index: pageIndex,
         height: 60.0,

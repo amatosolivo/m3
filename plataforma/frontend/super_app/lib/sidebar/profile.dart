@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MisListas extends StatelessWidget {
+class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,7 +15,7 @@ class MisListas extends StatelessWidget {
                 size: 30.0,
               ),
               Text(
-                'Mis Listas',
+                'Profile',
                 style: TextStyle(fontSize: 30.0),
               ),
             ],

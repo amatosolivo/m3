@@ -26,7 +26,7 @@ class _BienvenidaState extends State<Bienvenida> {
             borderRadius: BorderRadius.all(Radius.circular(5)),
             boxShadow: <BoxShadow>[
               BoxShadow(
-                  color: Color(0xffdf8e33).withAlpha(100),
+                  color: Color(0xff1B8A52).withAlpha(100),
                   offset: Offset(2, 4),
                   blurRadius: 8,
                   spreadRadius: 2)
@@ -34,7 +34,7 @@ class _BienvenidaState extends State<Bienvenida> {
             color: Colors.white),
         child: Text(
           'Acceso',
-          style: TextStyle(fontSize: 20, color: Color(0xfff7892b)),
+          style: TextStyle(fontSize: 20, color: Color(0xff2AA467)),
         ),
       ),
     );
@@ -117,7 +117,7 @@ class _BienvenidaState extends State<Bienvenida> {
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xfffbb448), Color(0xffe46b10)])),
+                  colors: [Color(0xff49C989), Color(0xff1B8A52)])),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,

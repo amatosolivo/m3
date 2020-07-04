@@ -6,7 +6,9 @@ class Configuracion extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-       
+        Card(
+          child: Text("Configuracion"),
+        ),
       ],
     );
   }

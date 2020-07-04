@@ -1,12 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:superapp/contenido/Comparar.dart';
-import 'package:superapp/contenido/Configuracion.dart';
-import 'package:superapp/contenido/Logout.dart';
-import 'package:superapp/contenido/MisListas.dart';
-import 'package:superapp/contenido/Paquetes.dart';
-import 'package:superapp/sideBar/sidebar.dart';
-
+import 'package:superapp/button_Bar/Comparar.dart';
+import 'package:superapp/button_Bar/Logout.dart';
+import 'package:superapp/button_Bar/Paquetes.dart';
+import 'package:superapp/contenido/Inside_Home.dart';
+import 'package:superapp/sidebar/Configuracion.dart';
 
 class BottomNavBar extends StatefulWidget {
   @override
@@ -15,14 +13,13 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
-
-  final MisListas _misListas = MisListas();
+  final inside_Home _misListas = inside_Home();
   final Comparar _comparar = Comparar();
   final Paquetes _paquetes = Paquetes();
   final Configuracion _configuracion = Configuracion();
   final Salida _salida = Salida();
 
-  Widget _showPage = MisListas();
+  Widget _showPage = inside_Home();
 
   Widget _pageChooser(int page) {
     switch (page) {
@@ -53,6 +50,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
 //       appBar: AppBar(
 //         title: Text('SupperApp',
 //         style: TextStyle(fontSize: 20,color: Colors.white),),
@@ -60,6 +58,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 //
 //       ),
 //      drawer:,
+=======
+>>>>>>> 8041f0542054f547007bfc2840ec88df65a7b42d
       bottomNavigationBar: CurvedNavigationBar(
         index: pageIndex,
         height: 60.0,

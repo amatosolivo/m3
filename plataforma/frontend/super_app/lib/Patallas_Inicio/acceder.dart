@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:superapp/Patallas_Inicio//registro.dart';
-import 'package:superapp/button_Bar/buttom_curved_nav.dart';
+import 'package:superapp/Patallas_Inicio/registro.dart';
+import 'package:superapp/button_Bar/button_nav.dart';
 import 'package:superapp/widgets/bezierContainer.dart';
 
 class Acceder extends StatefulWidget {
@@ -64,7 +64,7 @@ class _AccederState extends State<Acceder> {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => BottomNavBar()));
+            context, MaterialPageRoute(builder: (context) => ButtomNav()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
@@ -82,7 +82,7 @@ class _AccederState extends State<Acceder> {
             gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+                colors: [Color(0xff2AA467), Color(0xff1B8A52)])),
         child: Text(
           'Acceder',
           style: TextStyle(fontSize: 20, color: Colors.white),
@@ -206,7 +206,7 @@ class _AccederState extends State<Acceder> {
             Text(
               'Registrate',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Color(0xff1B8A52),
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
@@ -278,8 +278,4 @@ class _AccederState extends State<Acceder> {
       ),
     ));
   }
-
-  // Esto es para ver
 }
-
-/*vamos ver que lo que*/

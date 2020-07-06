@@ -20,7 +20,7 @@ class ButtomNav extends StatefulWidget {
 class _ButtomNavState extends State<ButtomNav> {
   PageController _pageController = PageController();
   List<Widget> _myPages = <Widget>[
-    inside_Home(),
+    InsideHome(),
     Comparar(),
     Paquetes(),
     Salida(),

@@ -13,13 +13,13 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
-  final inside_Home _misListas = inside_Home();
+  final InsideHome _misListas = InsideHome();
   final Comparar _comparar = Comparar();
   final Paquetes _paquetes = Paquetes();
   final Configuracion _configuracion = Configuracion();
   final Salida _salida = Salida();
 
-  Widget _showPage = inside_Home();
+  Widget _showPage = InsideHome();
 
   Widget _pageChooser(int page) {
     switch (page) {

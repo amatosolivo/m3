@@ -4,13 +4,13 @@ import 'package:superapp/widgets/category_card.dart';
 import 'package:superapp/widgets/constants.dart';
 import 'package:superapp/widgets/search_bar.dart';
 
-class inside_Home extends StatelessWidget {
+class InsideHome extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Meditation App',
+      title: 'Supper App',
       theme: ThemeData(
         fontFamily: "Cairo",
         scaffoldBackgroundColor: kBackgroundColor,
@@ -55,7 +55,8 @@ class HomeScreen extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .headline4
-                        .copyWith(fontWeight: FontWeight.w900),
+                        .copyWith(fontWeight: FontWeight.w900,color: Colors.white),
+
                   ),
                   SearchBar(),
                   Expanded(

@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MisListas extends StatefulWidget {
+class Productos extends StatefulWidget {
   @override
-  _MisListasState createState() => _MisListasState();
+  _ProductosState createState() => _ProductosState();
 }
 
-class _MisListasState extends State<MisListas> {
+class _ProductosState extends State<Productos> {
   @override
   final _formKey = GlobalKey<FormState>();
 
@@ -19,7 +19,7 @@ class _MisListasState extends State<MisListas> {
             Center(
               child: FlatButton(
                   color: Colors.greenAccent,
-                  child: Text('Nueva Lista'),
+                  child: Text('Productos'),
                   onPressed: () {
                     showDialog(
                         context: context,

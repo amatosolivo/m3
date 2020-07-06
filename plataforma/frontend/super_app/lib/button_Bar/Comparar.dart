@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Comparar extends StatelessWidget {
+class Comparar extends StatefulWidget {
+  @override
+  _CompararState createState() => _CompararState();
+}
+
+class _CompararState extends State<Comparar> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Card(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Icon(
-                Icons.compare,
-                size: 30.0,
-              ),
-              Text(
-                'Comparar',
-                style: TextStyle(fontSize: 30.0),
-              ),
-            ],
-          ),
-        )
+        DropdownButton(items: ,)
       ],
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:superapp/contenido/MisListas.dart';
+import 'package:superapp/contenido/Productos.dart';
+import 'package:superapp/contenido/SuperMercados.dart';
 import 'package:superapp/widgets/category_card.dart';
 import 'package:superapp/widgets/constants.dart';
 import 'package:superapp/widgets/search_bar.dart';
@@ -52,11 +54,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "Buenos Dias \nMiguel",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline4
-                        .copyWith(fontWeight: FontWeight.w900,color: Colors.white),
-
+                    style: Theme.of(context).textTheme.headline4.copyWith(
+                        fontWeight: FontWeight.w900, color: Colors.white),
                   ),
                   SearchBar(),
                   Expanded(
@@ -77,12 +76,18 @@ class HomeScreen extends StatelessWidget {
                         CategoryCard(
                           title: "SuperMercados",
                           image: "assets/images/supers.jpeg",
-                          press: () {},
+                          press: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SuperMercados()));
+                          },
                         ),
                         CategoryCard(
                           title: "Productos",
                           image: "assets/images/productos.png",
-                          press: () {},
+                          press: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Productos()));
+                          },
                         ),
                         CategoryCard(
                           title: "Categorias",

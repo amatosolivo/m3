@@ -9,9 +9,7 @@ class _CompararState extends State<Comparar> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: <Widget>[
-        DropdownButton(items: ,)
-      ],
+      children: <Widget>[],
     );
   }
 }

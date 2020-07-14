@@ -50,7 +50,6 @@ class _SideBarNavState extends State<SideBarNav> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("RetroPortal Studio")
               ],
             )),
           ),

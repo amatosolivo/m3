@@ -12,6 +12,10 @@ class _MisListasState extends State<MisListas> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff2AA467),
+        title: Text('Listas'),
+      ),
       resizeToAvoidBottomPadding: false,
       body: Container(
         child: Stack(

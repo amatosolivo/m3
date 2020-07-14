@@ -118,7 +118,6 @@ class _ButtomNavState extends State<ButtomNav> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("Supper"),
               ],
             ),
           ),

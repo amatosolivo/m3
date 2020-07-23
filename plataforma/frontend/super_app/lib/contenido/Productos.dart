@@ -25,7 +25,7 @@ class Products extends StatelessWidget {
         children: <Widget>[
           Container(
             // Here the height of the container is 45% of our total height
-            height: size.height * .25,
+            height: size.height * .20,
             decoration: BoxDecoration(
               color: Color(0xFFC2F2DA),
               image: DecorationImage(

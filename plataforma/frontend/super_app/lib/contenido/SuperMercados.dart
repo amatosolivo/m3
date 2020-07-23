@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superapp/widgets/search_bar.dart';
+import 'package:superapp/contenido/DropDownmenu.dart';
 
 class superMercados extends StatelessWidget {
   // This widget is the root of your application.
@@ -16,15 +16,13 @@ class superMercados extends StatelessWidget {
 class market extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size; //this gonna give us total height and with of our device
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
           Container(
-            // Here the height of the container is 45% of our total height
-            height: size.height * .25,
+            height: size.height * .15,
             decoration: BoxDecoration(
               color: Color(0xFFC2F2DA),
               image: DecorationImage(
@@ -35,7 +33,7 @@ class market extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -47,11 +45,11 @@ class market extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline4.copyWith(
                         fontWeight: FontWeight.w900, color: Colors.white),
                   ),
-                  SearchBar(),
+                  Dropdonwmenu(),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

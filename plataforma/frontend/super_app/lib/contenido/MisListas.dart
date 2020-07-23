@@ -7,6 +7,13 @@ class MisListas extends StatefulWidget {
 }
 
 class _MisListasState extends State<MisListas> {
+  String dropdownValue = '';
+  List<String> productosItems = [
+    'Carnes',
+    'Lacteos',
+    'Mariscos',
+    'Desechables'
+  ];
   @override
   final _formKey = GlobalKey<FormState>();
 
@@ -60,6 +67,25 @@ class _MisListasState extends State<MisListas> {
                                       ),
                                       Row(
                                         mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: <Widget>[
+                                          Image.network(
+                                            'http://aguiarbuenosaires.com/wp-content/uploads/2016/05/Parrilla-com-bife-de-chorizo-tapa-de-cuadril-e-entrecot.jpg',
+                                            height: 50,
+                                            width: 50,
+                                          ),
+                                          DropdownButton<String>(
+                                          value: dropdownValue,
+                                            elevation: 18,
+                                            onChanged: (String data){
+                                            setState(() {
+
+                                            });
+                                            },
+
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
                                           InputChip(
@@ -86,7 +112,7 @@ class _MisListasState extends State<MisListas> {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           );

@@ -1,18 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+class Item {
+  const Item(this.name);
+  final String name;
+}
+
 class MisListas extends StatefulWidget {
   @override
   _MisListasState createState() => _MisListasState();
 }
 
 class _MisListasState extends State<MisListas> {
-  String dropdownValue = '';
-  List<String> productosItems = [
-    'Carnes',
-    'Lacteos',
-    'Mariscos',
-    'Desechables'
+  Item selectedUser;
+  List<Item> items = <Item>[
+    const Item('Carnes'),
+    const Item('Lacteos'),
+    const Item('Mariscos'),
+    const Item('Bebidas'),
+    const Item('Varios'),
   ];
   @override
   final _formKey = GlobalKey<FormState>();
@@ -69,20 +75,26 @@ class _MisListasState extends State<MisListas> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
+                                          /*DropdownButton<Item>(
+                                            hint: Text("Seleciona Categoria"),
+                                            value: selectedUser,
+                                            onChanged: (Item Value) {
+                                              setState(() {
+                                                selectedUser = Value;
+                                              });
+                                            },
+                                            items: Item.map((Item user) {
+                                              return DropdownMenuItem<Item>(
+                                                value: user,
+                                              );
+                                            }).toList(),
+                                          ),*/
                                           Image.network(
                                             'http://aguiarbuenosaires.com/wp-content/uploads/2016/05/Parrilla-com-bife-de-chorizo-tapa-de-cuadril-e-entrecot.jpg',
                                             height: 50,
                                             width: 50,
                                           ),
-                                          DropdownButton<String>(
-                                          value: dropdownValue,
-                                            elevation: 18,
-                                            onChanged: (String data){
-                                            setState(() {
-
-                                            });
-                                            },
-
+                                        ],
                                       ),
                                       Row(
                                         mainAxisAlignment:

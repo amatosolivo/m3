@@ -3,7 +3,6 @@ import 'package:superapp/contenido/Product_details.dart';
 import 'package:superapp/widgets/search_bar.dart';
 
 class Productos extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,23 +16,14 @@ class Productos extends StatelessWidget {
 class Products extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size; //this gonna give us total height and with of our device
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff2AA467),
+        title: Text('Productos'),
+      ),
       resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
-          Container(
-            // Here the height of the container is 45% of our total height
-            height: size.height * .20,
-            decoration: BoxDecoration(
-              color: Color(0xFFC2F2DA),
-              image: DecorationImage(
-                alignment: Alignment.centerLeft,
-                image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
-              ),
-            ),
-          ),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -42,11 +32,6 @@ class Products extends StatelessWidget {
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topRight,
-                  ),
-                  Text(
-                    "Productos",
-                    style: Theme.of(context).textTheme.headline4.copyWith(
-                        fontWeight: FontWeight.w900, color: Colors.white),
                   ),
                   SearchBar(),
                   Expanded(

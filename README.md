@@ -95,10 +95,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [ASP.NetCore](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio)
-* [C Sharp](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/)
+* [Flutter](https://flutter.dev)
 
 
 <!-- GETTING STARTED -->
@@ -148,7 +145,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/amatosolivo/Localizacion/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/amatosolivo/m3/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -174,9 +171,11 @@ Distributed under the GNU V.2 License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@alex_sotam](https://twitter.com/alex_sotam) - amatosolivo@gmail.com
+Alexander Matos - [@alex_sotam](https://twitter.com/alex_sotam) - amatosolivo@gmail.com
+Miguel Santana - [@alex_sotam](https://twitter.com/ing_santana36) - ing.santana36@gmail.com
+Alejandro Mota - [@alex_sotam](http://www.interpages.net/am) - alejmota@gmail.com
 
-Project Link: [https://github.com/amatosolivo/Localizacion](https://github.com/amatosolivo/Localizacion)
+Project Link: [https://github.com/amatosolivo/m3](https://github.com/amatosolivo/m3)
 
 
 
@@ -200,17 +199,17 @@ Project Link: [https://github.com/amatosolivo/Localizacion](https://github.com/a
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/amatosolivo/Localizacion.svg?style=for-the-badge
-[contributors-url]: https://github.com/amatosolivo/Localizacion/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/amatosolivo/Localizacion.svg?style=for-the-badge
-[forks-url]: https://github.com/amatosolivo/Localizacion/network/members
-[stars-shield]: https://img.shields.io/github/stars/amatosolivo/Localizacion.svg?style=for-the-badge
-[stars-url]: https://github.com/amatosolivo/Localizacion/stargazers
-[issues-shield]: https://img.shields.io/github/issues/amatosolivo/Localizacion.svg?style=for-the-badge
-[issues-url]: https://github.com/amatosolivo/Localizacion/issues
-[license-shield]: https://img.shields.io/github/license/amatosolivo/Localizacion.svg?style=for-the-badge
-[license-url]: https://github.com/amatosolivo/Localizacion/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/amatosolivo/m3.svg?style=for-the-badge
+[contributors-url]: https://github.com/amatosolivo/m3/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/amatosolivo/m3.svg?style=for-the-badge
+[forks-url]: https://github.com/amatosolivo/m3/network/members
+[stars-shield]: https://img.shields.io/github/stars/amatosolivo/m3.svg?style=for-the-badge
+[stars-url]: https://github.com/amatosolivo/m3/stargazers
+[issues-shield]: https://img.shields.io/github/issues/amatosolivo/m3.svg?style=for-the-badge
+[issues-url]: https://github.com/amatosolivo/m3/issues
+[license-shield]: https://img.shields.io/github/license/amatosolivo/m3.svg?style=for-the-badge
+[license-url]: https://github.com/amatosolivo/m3/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/amatosolivo
+[linkedin-url]: https://www.linkedin.com/in/alexander-matos-71870529/
 [product-screenshot]: images/screenshot.png
 [product-screenshot2]: images/screenshot2.png

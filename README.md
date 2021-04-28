@@ -108,11 +108,11 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
-Locate the folder with "project.json file and run the command
+Locate the folder with "source" file and run the command
 
 * dotnet
   ```sh
-  dotnet run
+  flutter run
   ```
 
 ### Installation
@@ -120,7 +120,7 @@ Locate the folder with "project.json file and run the command
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/amatosolivo/Localizacion.git
+   git clone https://github.com/amatosolivo/m3.git
    
 3. Open Visual Studio or Visual Studio Code
    ```sh
@@ -172,8 +172,10 @@ Distributed under the GNU V.2 License. See `LICENSE` for more information.
 ## Contact
 
 Alexander Matos - [@alex_sotam](https://twitter.com/alex_sotam) - amatosolivo@gmail.com
-Miguel Santana - [@alex_sotam](https://twitter.com/ing_santana36) - ing.santana36@gmail.com
-Alejandro Mota - [@alex_sotam](http://www.interpages.net/am) - alejmota@gmail.com
+
+Miguel Santana - [@ing_santana36](https://twitter.com/ing_santana36) - ing.santana36@gmail.com
+
+Alejandro Mota - [alejmota@gmail.com](http://www.interpages.net/am) - alejmota@gmail.com
 
 Project Link: [https://github.com/amatosolivo/m3](https://github.com/amatosolivo/m3)
 

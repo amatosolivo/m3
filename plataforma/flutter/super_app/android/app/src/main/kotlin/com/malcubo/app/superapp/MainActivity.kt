@@ -1,4 +1,4 @@
-package com.malcubo.superapp
+package com.malcubo.app.superapp
 
 import io.flutter.embedding.android.FlutterActivity
 

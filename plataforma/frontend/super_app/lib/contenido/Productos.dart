@@ -21,7 +21,6 @@ class Products extends StatelessWidget {
         backgroundColor: Color(0xff2AA467),
         title: Text('Productos'),
       ),
-      resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
           SafeArea(

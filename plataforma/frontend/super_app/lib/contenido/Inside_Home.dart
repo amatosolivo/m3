@@ -29,7 +29,6 @@ class HomeScreen extends StatelessWidget {
     var size = MediaQuery.of(context)
         .size; //this gonna give us total height and with of our device
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
           Container(

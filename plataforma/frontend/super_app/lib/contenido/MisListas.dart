@@ -29,7 +29,6 @@ class _MisListasState extends State<MisListas> {
         backgroundColor: Color(0xff2AA467),
         title: Text('Listas'),
       ),
-      resizeToAvoidBottomPadding: false,
       body: Container(
         child: Stack(
           children: <Widget>[

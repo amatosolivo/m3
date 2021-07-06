@@ -10,6 +10,14 @@ class LocalAuthApi {
     } on PlatformException catch (e) {}
   }
 
+  static Future<List<BiometricType>> getBiometrics() async {
+    try {
+      return await _auth.getAvailableBiometrics();
+    } on PlatformException catch (e) {
+      return <BiometricType>[];
+    }
+  }
+
   static Future<bool> authenticate() async {
     final isAvailable = await hasBiometrics();
     if (!isAvailable) return false;
@@ -20,6 +28,8 @@ class LocalAuthApi {
         useErrorDialogs: true,
         stickyAuth: true,
       );
-    } catch (e) {}
+    } on PlatformException catch (e) {
+      return false;
+    }
   }
 }

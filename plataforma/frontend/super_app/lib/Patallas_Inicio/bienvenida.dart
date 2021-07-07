@@ -64,15 +64,7 @@ class _BienvenidaState extends State<Bienvenida> {
   }
 
   Widget _finger() {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Image(
-            image: AssetImage('assets/icons/fingerprint.svg'),
-          )
-        ],
-      ),
-    );
+    return Container();
   }
 
   Widget _title() {

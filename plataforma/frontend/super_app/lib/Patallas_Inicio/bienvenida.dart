@@ -64,7 +64,48 @@ class _BienvenidaState extends State<Bienvenida> {
   }
 
   Widget _finger() {
-    return Container();
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Image.asset(
+            'assets/icons/fingerprint.png',
+            width: 100.0,
+            color: Colors.white,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Text(
+            'FingerPrint Auth',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _authF() {
+    return Container(
+      width: double.infinity,
+      child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Color(0xff2AA467),
+          ),
+          onPressed: () {},
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
+            child: Text(
+              'Autenticate',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          )),
+    );
   }
 
   Widget _title() {
@@ -102,7 +143,7 @@ class _BienvenidaState extends State<Bienvenida> {
             children: <Widget>[
               _title(),
               SizedBox(
-                height: 50,
+                height: 80,
               ),
               _submitButton(),
               SizedBox(
@@ -113,6 +154,10 @@ class _BienvenidaState extends State<Bienvenida> {
                 height: 30,
               ),
               _finger(),
+              SizedBox(
+                height: 15,
+              ),
+              _authF(),
             ],
           ),
         ),

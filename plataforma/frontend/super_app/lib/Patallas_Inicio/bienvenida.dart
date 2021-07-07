@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:superapp/Patallas_Inicio/acceder.dart';
 import 'package:superapp/Patallas_Inicio/registro.dart';
+import 'package:superapp/widgets/constants.dart';
 
 class Bienvenida extends StatefulWidget {
   Bienvenida({Key key, this.title}) : super(key: key);
@@ -63,7 +64,15 @@ class _BienvenidaState extends State<Bienvenida> {
   }
 
   Widget _finger() {
-    return Container();
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Image(
+            image: AssetImage('assets/icons/fingerprint.svg'),
+          )
+        ],
+      ),
+    );
   }
 
   Widget _title() {
@@ -82,18 +91,19 @@ class _BienvenidaState extends State<Bienvenida> {
           padding: EdgeInsets.symmetric(horizontal: 20),
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(5)),
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                    color: Colors.grey.shade200,
-                    offset: Offset(2, 4),
-                    blurRadius: 5,
-                    spreadRadius: 2)
-              ],
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xff49C989), Color(0xff1B8A52)])),
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.grey.shade200,
+                  offset: Offset(2, 4),
+                  blurRadius: 5,
+                  spreadRadius: 2)
+            ],
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0xff49C989), Color(0xff1B8A52)]),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -108,9 +118,9 @@ class _BienvenidaState extends State<Bienvenida> {
               ),
               _signUpButton(),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
-              //_finger(),
+              _finger(),
             ],
           ),
         ),

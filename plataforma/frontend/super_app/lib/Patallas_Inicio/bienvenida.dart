@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:superapp/Patallas_Inicio/acceder.dart';
+import 'package:superapp/Patallas_Inicio/home.dart';
 import 'package:superapp/Patallas_Inicio/registro.dart';
 import 'package:superapp/widgets/constants.dart';
 
@@ -13,6 +16,71 @@ class Bienvenida extends StatefulWidget {
 }
 
 class _BienvenidaState extends State<Bienvenida> {
+  LocalAuthentication auth = LocalAuthentication();
+  bool _canCheckBiometric;
+  List<BiometricType> _availableBiometric;
+  String authorized = "Not authorized";
+
+// verificar el bioemtrico y el sensor se puede usar o no
+
+  Future<void> _checkBiometric() async {
+    bool canCheckBiometric;
+    try {
+      canCheckBiometric = await auth.canCheckBiometrics;
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    if (!mounted) return;
+    setState(() {
+      _canCheckBiometric = canCheckBiometric;
+    });
+  }
+
+//funcion para ver si el biometrico esta disponible dentro del dispositivo
+  Future<void> _getAvailableBiometric() async {
+    List<BiometricType> avaliableBiometric;
+    try {
+      avaliableBiometric = await auth.getAvailableBiometrics();
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    if (!mounted) return;
+
+    setState(() {
+      _availableBiometric = avaliableBiometric;
+    });
+  }
+
+//funcion que abre dialogo de autenticacion y chequea si esta autenticado o no.
+
+  Future<void> _authenticate() async {
+    bool authenticated = false;
+    try {
+      authenticated = await auth.authenticate(
+        localizedReason: "Scanear Huella",
+        useErrorDialogs: true,
+        stickyAuth: false,
+      );
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    if (!mounted) return;
+    setState(() {
+      authorized =
+          authenticated ? "Autorizacion Consedida" : "Fallo Autorizacion";
+      if (authenticated) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Home()));
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    _checkBiometric();
+    _getAvailableBiometric();
+  }
+
   Widget _submitButton() {
     return InkWell(
       onTap: () {
@@ -95,13 +163,15 @@ class _BienvenidaState extends State<Bienvenida> {
           style: ElevatedButton.styleFrom(
             primary: Color(0xff2AA467),
           ),
-          onPressed: () {},
+          onPressed: _authenticate,
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
             child: Text(
               'Autenticate',
               style: TextStyle(
                 color: Colors.white,
+                fontSize: 22.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
           )),

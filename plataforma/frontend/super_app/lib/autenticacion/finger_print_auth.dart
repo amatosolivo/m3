@@ -1,35 +1,75 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 
-class LocalAuthApi {
-  static final _auth = LocalAuthentication();
+class AuthApp extends StatefulWidget {
+  @override
+  _AuthAppState createState() => _AuthAppState();
+}
 
-  static Future<bool> hasBiometrics() async {
-    try {
-      return await _auth.canCheckBiometrics;
-    } on PlatformException catch (e) {}
-  }
+class _AuthAppState extends State<AuthApp> {
+  LocalAuthentication auth = LocalAuthentication();
+  bool _canCheckBiometric;
+  List<BiometricType> _availableBiometric;
+  String authorized = "Not authorized";
 
-  static Future<List<BiometricType>> getBiometrics() async {
+// verificar el bioemtrico y el sensor se puede usar o no
+
+  Future<void> _checkBiometric() async {
+    bool canCheckBiometric;
     try {
-      return await _auth.getAvailableBiometrics();
+      canCheckBiometric = await auth.canCheckBiometrics;
     } on PlatformException catch (e) {
-      return <BiometricType>[];
+      print(e);
     }
+    if (!mounted) return;
+    setState(() {
+      _canCheckBiometric = canCheckBiometric;
+    });
   }
 
-  static Future<bool> authenticate() async {
-    final isAvailable = await hasBiometrics();
-    if (!isAvailable) return false;
-
+//funcion para ver si el biometrico esta disponible dentro del dispositivo
+  Future<void> _getAvailableBiometric() async {
+    List<BiometricType> avaliableBiometric;
     try {
-      return await _auth.authenticate(
-        localizedReason: 'Scan FingerPrint',
+      avaliableBiometric = await auth.getAvailableBiometrics();
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    if (!mounted) return;
+
+    setState(() {
+      _availableBiometric = avaliableBiometric;
+    });
+  }
+
+//funcion que abre dialogo de autenticacion y chequea si esta autenticado o no.
+
+  Future<void> _authenticate() async {
+    bool authenticated = false;
+    try {
+      authenticated = await auth.authenticate(
+        localizedReason: "Scanear Huella",
         useErrorDialogs: true,
-        stickyAuth: true,
+        stickyAuth: false,
       );
     } on PlatformException catch (e) {
-      return false;
+      print(e);
     }
+    if (!mounted) return;
+    setState(() {
+      authorized =
+          authenticated ? "Autorizacion Consedida" : "Fallo Autorizacion";
+    });
+  }
+
+  @override
+  void initState() {
+    _checkBiometric();
+    _getAvailableBiometric();
+  }
+
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

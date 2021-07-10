@@ -49,9 +49,7 @@ class _AuthAppState extends State<AuthApp> {
     bool authenticated = false;
     try {
       authenticated = await auth.authenticate(
-        localizedReason: "Scanear Huella",
-        useErrorDialogs: true,
-        stickyAuth: false,
+
       );
     } on PlatformException catch (e) {
       print(e);

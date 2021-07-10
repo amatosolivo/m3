@@ -37,7 +37,11 @@ class _BienvenidaState extends State<Bienvenida> {
   }
 
 //funcion para ver si el biometrico esta disponible dentro del dispositivo
-  Future<void> _getAvailableBiometric() async {
+ Future<bool>authenticateIsAvailable()async{}
+ 
+ 
+  Future<void> _getAvailableBiometric() async {  
+
     List<BiometricType> avaliableBiometric;
     try {
       avaliableBiometric = await auth.getAvailableBiometrics();
@@ -54,10 +58,17 @@ class _BienvenidaState extends State<Bienvenida> {
 //funcion que abre dialogo de autenticacion y chequea si esta autenticado o no.
 
   Future<void> _authenticate() async {
-    bool authenticated = false;
+    bool authenticated = true;
     try {
       authenticated = await auth.authenticate(
+<<<<<<< HEAD
 
+=======
+        biometricOnly: true,
+        localizedReason: "Scanear Huella",
+        useErrorDialogs: true,
+        stickyAuth: false,
+>>>>>>> 6a8ac963866b5599b05b96d558d8fd9d354d9946
       );
     } on PlatformException catch (e) {
       print(e);
@@ -158,21 +169,22 @@ class _BienvenidaState extends State<Bienvenida> {
     return Container(
       width: double.infinity,
       child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: Color(0xff2AA467),
-          ),
-          onPressed: _authenticate,
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-            child: Text(
-              'Autenticate',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-              ),
+        style: ElevatedButton.styleFrom(
+          primary: Color(0xff2AA467),
+        ),
+        onPressed: _authenticate,
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
+          child: Text(
+            'Autenticate',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 22.0,
+              fontWeight: FontWeight.bold,
             ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 

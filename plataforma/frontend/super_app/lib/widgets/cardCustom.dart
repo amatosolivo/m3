@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class cardCustom extends StatelessWidget {
-  const cardCustom({
+class CardCustom extends StatelessWidget {
+  const CardCustom({
     Key key,
   }) : super(key: key);
   @override

@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:superapp/contenido/Inside_Home.dart';
 import 'package:superapp/widgets/ui/inicio/pagina_inico.dart';
 
-class superMercados extends StatelessWidget {
+class SuperMercados extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Supper App',
-      home: market(),
+      home: Market(),
     );
   }
 }
 
-class market extends StatelessWidget {
+class Market extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

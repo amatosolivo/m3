@@ -37,11 +37,9 @@ class _BienvenidaState extends State<Bienvenida> {
   }
 
 //funcion para ver si el biometrico esta disponible dentro del dispositivo
- Future<bool>authenticateIsAvailable()async{}
- 
- 
-  Future<void> _getAvailableBiometric() async {  
+  Future<bool> authenticateIsAvailable() async {}
 
+  Future<void> _getAvailableBiometric() async {
     List<BiometricType> avaliableBiometric;
     try {
       avaliableBiometric = await auth.getAvailableBiometrics();
@@ -61,14 +59,10 @@ class _BienvenidaState extends State<Bienvenida> {
     bool authenticated = true;
     try {
       authenticated = await auth.authenticate(
-<<<<<<< HEAD
-
-=======
         biometricOnly: true,
         localizedReason: "Scanear Huella",
         useErrorDialogs: true,
         stickyAuth: false,
->>>>>>> 6a8ac963866b5599b05b96d558d8fd9d354d9946
       );
     } on PlatformException catch (e) {
       print(e);

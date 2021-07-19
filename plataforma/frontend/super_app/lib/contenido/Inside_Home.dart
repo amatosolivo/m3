@@ -77,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                           image: "assets/images/supers.jpeg",
                           press: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => superMercados()));
+                                builder: (context) => SuperMercados()));
                           },
                         ),
                         CategoryCard(

@@ -46,10 +46,10 @@ class _AuthAppState extends State<AuthApp> {
 //funcion que abre dialogo de autenticacion y chequea si esta autenticado o no.
 
   Future<void> _authenticate() async {
-    bool authenticated = false;
+    bool authenticate = false;
     try {
-      authenticated = await auth.authenticate(
-
+      authenticate = await auth.authenticate(
+        localizedReason: "Huella Digital",
       );
     } on PlatformException catch (e) {
       print(e);
@@ -57,7 +57,7 @@ class _AuthAppState extends State<AuthApp> {
     if (!mounted) return;
     setState(() {
       authorized =
-          authenticated ? "Autorizacion Consedida" : "Fallo Autorizacion";
+          authenticate ? "Autorizacion Consedida" : "Fallo Autorizacion";
     });
   }
 
